@@ -1,0 +1,1 @@
+<?php echo e($this->table); ?><?php /**PATH C:\Users\bogda\Herd\beodental\storage\framework\views/6258824a79366f00612dad1d0d6358a9.blade.php ENDPATH**/ ?>
