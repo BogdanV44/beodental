@@ -71,6 +71,9 @@
         "test": [
             "@php artisan config:clear --ansi",
             "@php artisan test"
+        ],
+        "vercel": [
+            "@php artisan migrate --seed"
         ]
     },
     "extra": {
