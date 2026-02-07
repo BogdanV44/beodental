@@ -5,7 +5,7 @@
 
     <?php if (! empty(trim($__env->yieldContent('style')))): ?>
         <?php echo $__env->yieldContent('style'); ?>
-    <?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
     <body>
 
@@ -13,9 +13,9 @@
 
     <?php echo $__env->make("front.fixed.header", array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
-    <?php if(!Request::is('/')): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(!Request::is('/')): ?>
         <?php echo $__env->make('front.fixed.page-header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
-    <?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
     <?php echo $__env->yieldContent("content"); ?>
 
@@ -25,7 +25,7 @@
 
     <?php if (! empty(trim($__env->yieldContent('script')))): ?>
         <?php echo $__env->yieldContent('script'); ?>
-    <?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 </body>
 
 </html>

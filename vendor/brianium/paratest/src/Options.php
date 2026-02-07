@@ -29,6 +29,7 @@ use function is_array;
 use function is_bool;
 use function is_numeric;
 use function is_string;
+use function min;
 use function preg_match;
 use function realpath;
 use function sprintf;
@@ -56,7 +57,7 @@ final readonly class Options
         'cache-directory' => true,
         'configuration' => true,
         'coverage-filter' => true,
-        'dont-report-useless-tests' => true,
+        'do-not-report-useless-tests' => true,
         'exclude-group' => true,
         'fail-on-incomplete' => true,
         'fail-on-risky' => true,
@@ -80,6 +81,8 @@ final readonly class Options
         'disallow-test-output' => true,
         'enforce-time-limit' => true,
         'default-time-limit' => true,
+        'exclude-source-from-xml-coverage' => true,
+        'only-summary-for-coverage-text' => true,
     ];
 
     public bool $needsTeamcity;
@@ -129,11 +132,22 @@ final readonly class Options
         $passthruPhp = self::parsePassthru($options['passthru-php']);
         unset($options['passthru-php']);
 
+        assert($options['max-processes'] === null || is_string($options['max-processes']));
+        $maxProcesses = is_numeric($options['max-processes'])
+            ? (int) $options['max-processes']
+            : null;
+        unset($options['max-processes']);
+
         assert(is_string($options['processes']));
         $processes = is_numeric($options['processes'])
             ? (int) $options['processes']
-            : self::getNumberOfCPUCores();
+            : null;
         unset($options['processes']);
+
+        if ($processes === null) {
+            $numberOfCPUCores = self::getNumberOfCPUCores();
+            $processes        = $maxProcesses === null ? $numberOfCPUCores : min($numberOfCPUCores, $maxProcesses);
+        }
 
         assert(is_string($options['runner']) && $options['runner'] !== '');
         $runner = $options['runner'];
@@ -289,6 +303,12 @@ final readonly class Options
                 'auto',
             ),
             new InputOption(
+                'max-processes',
+                null,
+                InputOption::VALUE_REQUIRED,
+                'The maximum number of test processes to run when "auto" is used for the number of processes.',
+            ),
+            new InputOption(
                 'runner',
                 null,
                 InputOption::VALUE_REQUIRED,
@@ -408,7 +428,7 @@ final readonly class Options
                 '0',
             ),
             new InputOption(
-                'dont-report-useless-tests',
+                'do-not-report-useless-tests',
                 null,
                 InputOption::VALUE_NONE,
                 '@see PHPUnit guide, chapter: ' . $chapter,
@@ -642,6 +662,12 @@ final readonly class Options
                 'coverage-xml',
                 null,
                 InputOption::VALUE_REQUIRED,
+                '@see PHPUnit guide, chapter: ' . $chapter,
+            ),
+            new InputOption(
+                'exclude-source-from-xml-coverage',
+                null,
+                InputOption::VALUE_NONE,
                 '@see PHPUnit guide, chapter: ' . $chapter,
             ),
             new InputOption(

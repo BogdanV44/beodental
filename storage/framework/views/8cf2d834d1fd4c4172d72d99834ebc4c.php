@@ -4,12 +4,12 @@
         <nav id="top-header-line" class="navbar-expand-lg">
             <div class="container">
                 <ul class="d-flex gap-3">
-                    <?php if(!Auth::check()): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(!Auth::check()): ?>
                         <li>
                             <a href="<?php echo e(route('login')); ?>">Login</a>
                         </li>
                     <?php else: ?>
-                        <?php if(auth()->user()->fk_role_id < 3): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(auth()->user()->fk_role_id < 3): ?>
                             <li>
                                 <a href="<?php echo e(url(\App\Filament\Resources\Appointments\AppointmentResource::getUrl('index'))); ?>">Admin</a>
                             </li>
@@ -17,7 +17,7 @@
                             <li>
                                 <a href="<?php echo e(route('appointments.index')); ?>">Appointments</a>
                             </li>
-                        <?php endif; ?>
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                         <li>
                             <form action="<?php echo e(route('logout')); ?>" method="POST" id="logoutForm">
@@ -27,7 +27,7 @@
                                 </a>
                             </form>
                         </li>
-                    <?php endif; ?>
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 </ul>
             </div>
         </nav>
@@ -43,21 +43,21 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <?php $__currentLoopData = $menu; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <?php if(!$page->has_submenu): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $menu; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(!$page->has_submenu): ?>
                                     <li class="nav-item"><a class="nav-link" href="<?php echo e(route($page->route)); ?>"><?php echo e($page->name); ?></a></li>
                                     <?php continue; ?>;
-                                <?php endif; ?>
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                 <li class="nav-item submenu">
                                     <a class="nav-link" href="<?php echo e(route($page->route)); ?>"><?php echo e($page->name); ?></a>
                                     <ul>
-                                        <?php $__currentLoopData = $page->children; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $childPage): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $page->children; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $childPage): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <li class="nav-item"><a class="nav-link" href="<?php echo e(route($childPage->route)); ?>"><?php echo e($childPage->name); ?></a></li>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                     </ul>
                                 </li>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                             <li class="nav-item highlighted-menu"><a class="nav-link" href="<?php echo e(route('appointment')); ?>">book appointment</a></li>
                         </ul>

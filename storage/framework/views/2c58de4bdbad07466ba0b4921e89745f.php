@@ -123,7 +123,7 @@ unset($__defined_vars, $__key, $__value); ?>
             ])); ?>
 
 >
-    <!--[if BLOCK]><![endif]--><?php if(filled($label) && $labelSrOnly): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($label) && $labelSrOnly): ?>
         <<?php echo e($labelTag); ?>
 
             <?php if($labelTag === 'label'): ?>
@@ -136,9 +136,9 @@ unset($__defined_vars, $__key, $__value); ?>
             <?php echo e($label); ?>
 
         </<?php echo e($labelTag); ?>>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if((filled($label) && (! $labelSrOnly)) || $hasInlineLabel || $aboveLabelSchema || $belowLabelSchema || $beforeLabelSchema || $afterLabelSchema || $labelPrefix || $labelSuffix): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((filled($label) && (! $labelSrOnly)) || $hasInlineLabel || $aboveLabelSchema || $belowLabelSchema || $beforeLabelSchema || $afterLabelSchema || $labelPrefix || $labelSuffix): ?>
         <div
             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'fi-fo-field-label-col',
@@ -157,7 +157,7 @@ unset($__defined_vars, $__key, $__value); ?>
                 <?php echo e($beforeLabelSchema); ?>
 
 
-                <?php if((filled($label) && (! $labelSrOnly)) || $labelPrefix || $labelSuffix): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((filled($label) && (! $labelSrOnly)) || $labelPrefix || $labelSuffix): ?>
                     <<?php echo e($labelTag); ?>
 
                         <?php if($labelTag === 'label'): ?>
@@ -170,17 +170,17 @@ unset($__defined_vars, $__key, $__value); ?>
                         <?php echo e($labelPrefix); ?>
 
 
-                        <?php if(filled($label) && (! $labelSrOnly)): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($label) && (! $labelSrOnly)): ?>
                             <span class="fi-fo-field-label-content">
-                                <?php echo e($label); ?><!--[if BLOCK]><![endif]--><?php if($required && (! $isDisabled)): ?><sup class="fi-fo-field-label-required-mark">*</sup>
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php echo e($label); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($required && (! $isDisabled)): ?><sup class="fi-fo-field-label-required-mark">*</sup>
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             </span>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                         <?php echo e($labelSuffix); ?>
 
                     </<?php echo e($labelTag); ?>>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                 <?php echo e($afterLabelSchema); ?>
 
@@ -189,14 +189,14 @@ unset($__defined_vars, $__key, $__value); ?>
             <?php echo e($belowLabelSchema); ?>
 
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if((! \Filament\Support\is_slot_empty($slot)) || $hasError || $aboveContentSchema || $belowContentSchema || $beforeContentSchema || $afterContentSchema || $aboveErrorMessageSchema || $belowErrorMessageSchema): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((! \Filament\Support\is_slot_empty($slot)) || $hasError || $aboveContentSchema || $belowContentSchema || $beforeContentSchema || $afterContentSchema || $aboveErrorMessageSchema || $belowErrorMessageSchema): ?>
         <div class="fi-fo-field-content-col">
             <?php echo e($aboveContentSchema); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if($beforeContentSchema || $afterContentSchema): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($beforeContentSchema || $afterContentSchema): ?>
                 <div class="fi-fo-field-content-ctn">
                     <?php echo e($beforeContentSchema); ?>
 
@@ -212,31 +212,31 @@ unset($__defined_vars, $__key, $__value); ?>
             <?php else: ?>
                 <?php echo e($slot); ?>
 
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e($belowContentSchema); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if($hasError): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasError): ?>
                 <?php echo e($aboveErrorMessageSchema); ?>
 
 
-                <!--[if BLOCK]><![endif]--><?php if(filled($errorMessages)): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($errorMessages)): ?>
                     <ul
                         data-validation-error
                         class="fi-fo-field-wrp-error-list"
                     >
-                        <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $errorMessages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $errorMessage): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $errorMessages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $errorMessage): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <li class="fi-fo-field-wrp-error-message">
-                                <!--[if BLOCK]><![endif]--><?php if($areHtmlErrorMessagesAllowed): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($areHtmlErrorMessagesAllowed): ?>
                                     <?php echo $errorMessage; ?>
 
                                 <?php else: ?>
                                     <?php echo e($errorMessage); ?>
 
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             </li>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                     </ul>
                 <?php elseif($areHtmlErrorMessagesAllowed): ?>
                     <div
@@ -254,12 +254,12 @@ unset($__defined_vars, $__key, $__value); ?>
                         <?php echo e($errorMessage); ?>
 
                     </p>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                 <?php echo e($belowErrorMessageSchema); ?>
 
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 </div>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\forms\resources\views/components/field-wrapper.blade.php ENDPATH**/ ?>

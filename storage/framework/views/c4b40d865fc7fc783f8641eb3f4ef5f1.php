@@ -40,9 +40,9 @@ unset($__defined_vars, $__key, $__value); ?>
 
 <nav <?php echo e($attributes->class(['fi-breadcrumbs'])); ?>>
     <ol class="fi-breadcrumbs-list">
-        <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $breadcrumbs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $url => $label): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $breadcrumbs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $url => $label): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <li class="fi-breadcrumbs-item">
-                <!--[if BLOCK]><![endif]--><?php if(! $loop->first): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $loop->first): ?>
                     <?php echo e(generate_icon_html(\Filament\Support\Icons\Heroicon::ChevronRight, alias: \Filament\Support\View\SupportIconAlias::BREADCRUMBS_SEPARATOR, attributes: (new ComponentAttributeBag)->class([
                             'fi-breadcrumbs-item-separator fi-ltr',
                         ]))); ?>
@@ -52,9 +52,9 @@ unset($__defined_vars, $__key, $__value); ?>
                             'fi-breadcrumbs-item-separator fi-rtl',
                         ]))); ?>
 
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                <!--[if BLOCK]><![endif]--><?php if(is_int($url)): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(is_int($url)): ?>
                     <span class="fi-breadcrumbs-item-label">
                         <?php echo e($label); ?>
 
@@ -68,9 +68,9 @@ unset($__defined_vars, $__key, $__value); ?>
                         <?php echo e($label); ?>
 
                     </a>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
             </li>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </ol>
 </nav>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\support\resources\views/components/breadcrumbs.blade.php ENDPATH**/ ?>

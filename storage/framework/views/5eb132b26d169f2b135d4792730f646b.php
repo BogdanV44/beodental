@@ -92,35 +92,35 @@ unset($__defined_vars, $__key, $__value); ?>
         <?php endif; ?>
         class="fi-sidebar-item-btn"
     >
-        <!--[if BLOCK]><![endif]--><?php if(filled($icon) && ((! $subGrouped) || $sidebarCollapsible)): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($icon) && ((! $subGrouped) || $sidebarCollapsible)): ?>
             <?php echo e(\Filament\Support\generate_icon_html(($active && $activeIcon) ? $activeIcon : $icon, attributes: (new \Illuminate\View\ComponentAttributeBag([
                     'x-show' => ($subGrouped && $sidebarCollapsible) ? '! $store.sidebar.isOpen' : false,
                 ]))->class(['fi-sidebar-item-icon']), size: \Filament\Support\Enums\IconSize::Large)); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if((blank($icon) && $grouped) || $subGrouped): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((blank($icon) && $grouped) || $subGrouped): ?>
             <div
                 <?php if(filled($icon) && $subGrouped && $sidebarCollapsible): ?>
                     x-show="$store.sidebar.isOpen"
                 <?php endif; ?>
                 class="fi-sidebar-item-grouped-border"
             >
-                <!--[if BLOCK]><![endif]--><?php if(! $first): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $first): ?>
                     <div
                         class="fi-sidebar-item-grouped-border-part-not-first"
                     ></div>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                <!--[if BLOCK]><![endif]--><?php if(! $last): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $last): ?>
                     <div
                         class="fi-sidebar-item-grouped-border-part-not-last"
                     ></div>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                 <div class="fi-sidebar-item-grouped-border-part"></div>
             </div>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
         <span
             <?php if($sidebarCollapsible): ?>
@@ -135,7 +135,7 @@ unset($__defined_vars, $__key, $__value); ?>
 
         </span>
 
-        <!--[if BLOCK]><![endif]--><?php if(filled($badge)): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($badge)): ?>
             <span
                 <?php if($sidebarCollapsible): ?>
                     x-show="$store.sidebar.isOpen"
@@ -168,12 +168,12 @@ unset($__defined_vars, $__key, $__value); ?>
 <?php unset($__componentOriginal986dce9114ddce94a270ab00ce6c273d); ?>
 <?php endif; ?>
             </span>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </a>
 
-    <!--[if BLOCK]><![endif]--><?php if(($active || $activeChildItems) && $childItems): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(($active || $activeChildItems) && $childItems): ?>
         <ul class="fi-sidebar-sub-group-items">
-            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $childItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $childItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $childItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $childItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php
                     $isChildActive = $childItem->isActive();
                     $isChildItemChildItemsActive = $childItem->isChildItemsActive();
@@ -208,8 +208,8 @@ unset($__defined_vars, $__key, $__value); ?>
 <?php $component = $__componentOriginal7edbc33aaa546e1feb86647dcd0e4eb8; ?>
 <?php unset($__componentOriginal7edbc33aaa546e1feb86647dcd0e4eb8); ?>
 <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </ul>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 </li>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\filament\resources\views/components/sidebar/item.blade.php ENDPATH**/ ?>

@@ -584,6 +584,8 @@ class ModelsCommand extends Command
                     'float', 'real', 'float4',
                     'double', 'float8' => 'float',
 
+                    'decimal', 'numeric' => 'numeric',
+
                     default => 'string',
                 };
             }
@@ -887,7 +889,6 @@ class ModelsCommand extends Command
 
         if (in_array($relation, ['hasOne', 'hasOneThrough', 'morphOne'], true)) {
             $defaultProp = $reflectionObj->getProperty('withDefault');
-            $defaultProp->setAccessible(true);
 
             return !$defaultProp->getValue($relationObj);
         }
@@ -897,7 +898,6 @@ class ModelsCommand extends Command
         }
 
         $fkProp = $reflectionObj->getProperty('foreignKey');
-        $fkProp->setAccessible(true);
 
         $enforceNullableRelation = $this->laravel['config']->get('ide-helper.enforce_nullable_relationships', true);
 
@@ -930,7 +930,6 @@ class ModelsCommand extends Command
         }
 
         $fkProp = $reflectionObj->getProperty('foreignKey');
-        $fkProp->setAccessible(true);
 
         foreach (Arr::wrap($fkProp->getValue($relationObj)) as $foreignKey) {
             if (isset($this->nullableColumns[$foreignKey])) {
@@ -1283,9 +1282,6 @@ class ModelsCommand extends Command
      */
     protected function getAttributeTypes(Model $model, \ReflectionMethod $reflectionMethod): Collection
     {
-        // Private/protected ReflectionMethods require setAccessible prior to PHP 8.1
-        $reflectionMethod->setAccessible(true);
-
         /** @var Attribute $attribute */
         $attribute = $reflectionMethod->invoke($model);
 

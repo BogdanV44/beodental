@@ -13,7 +13,7 @@
         <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::TOPBAR_START)); ?>
 
 
-        <!--[if BLOCK]><![endif]--><?php if($hasNavigation): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasNavigation): ?>
             <?php if (isset($component)) { $__componentOriginalf0029cce6d19fd6d472097ff06a800a1 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf0029cce6d19fd6d472097ff06a800a1 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament::components.icon-button','data' => ['color' => 'gray','icon' => \Filament\Support\Icons\Heroicon::OutlinedBars3,'iconAlias' => \Filament\View\PanelsIconAlias::TOPBAR_OPEN_SIDEBAR_BUTTON,'iconSize' => 'lg','label' => __('filament-panels::layout.actions.sidebar.expand.label'),'xCloak' => true,'xData' => '{}','xOn:click' => '$store.sidebar.open()','xShow' => '! $store.sidebar.isOpen','class' => 'fi-topbar-open-sidebar-btn']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -55,10 +55,10 @@
 <?php $component = $__componentOriginalf0029cce6d19fd6d472097ff06a800a1; ?>
 <?php unset($__componentOriginalf0029cce6d19fd6d472097ff06a800a1); ?>
 <?php endif; ?>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
         <div class="fi-topbar-start">
-            <!--[if BLOCK]><![endif]--><?php if($isSidebarCollapsibleOnDesktop): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSidebarCollapsibleOnDesktop): ?>
                 <?php if (isset($component)) { $__componentOriginalf0029cce6d19fd6d472097ff06a800a1 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf0029cce6d19fd6d472097ff06a800a1 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament::components.icon-button','data' => ['color' => 'gray','icon' => $isRtl ? \Filament\Support\Icons\Heroicon::OutlinedChevronLeft : \Filament\Support\Icons\Heroicon::OutlinedChevronRight,'iconAlias' => 
@@ -93,9 +93,9 @@
 <?php $component = $__componentOriginalf0029cce6d19fd6d472097ff06a800a1; ?>
 <?php unset($__componentOriginalf0029cce6d19fd6d472097ff06a800a1); ?>
 <?php endif; ?>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-            <!--[if BLOCK]><![endif]--><?php if($isSidebarCollapsibleOnDesktop || $isSidebarFullyCollapsibleOnDesktop): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSidebarCollapsibleOnDesktop || $isSidebarFullyCollapsibleOnDesktop): ?>
                 <?php if (isset($component)) { $__componentOriginalf0029cce6d19fd6d472097ff06a800a1 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf0029cce6d19fd6d472097ff06a800a1 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament::components.icon-button','data' => ['color' => 'gray','icon' => $isRtl ? \Filament\Support\Icons\Heroicon::OutlinedChevronRight : \Filament\Support\Icons\Heroicon::OutlinedChevronLeft,'iconAlias' => 
@@ -130,12 +130,12 @@
 <?php $component = $__componentOriginalf0029cce6d19fd6d472097ff06a800a1; ?>
 <?php unset($__componentOriginalf0029cce6d19fd6d472097ff06a800a1); ?>
 <?php endif; ?>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::TOPBAR_LOGO_BEFORE)); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if($homeUrl = filament()->getHomeUrl()): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($homeUrl = filament()->getHomeUrl()): ?>
                 <a <?php echo e(\Filament\Support\generate_href_html($homeUrl)); ?>>
                     <?php if (isset($component)) { $__componentOriginalb501e8c73315a10eb0eb5fd14fda0d94 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalb501e8c73315a10eb0eb5fd14fda0d94 = $attributes; } ?>
@@ -179,14 +179,14 @@
 <?php $component = $__componentOriginalb501e8c73315a10eb0eb5fd14fda0d94; ?>
 <?php unset($__componentOriginalb501e8c73315a10eb0eb5fd14fda0d94); ?>
 <?php endif; ?>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::TOPBAR_LOGO_AFTER)); ?>
 
         </div>
 
-        <!--[if BLOCK]><![endif]--><?php if($hasTopNavigation || (! $hasNavigation)): ?>
-            <!--[if BLOCK]><![endif]--><?php if($hasTenancy && filament()->hasTenantMenu()): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasTopNavigation || (! $hasNavigation)): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasTenancy && filament()->hasTenantMenu()): ?>
                 <?php if (isset($component)) { $__componentOriginal32b9f4abfc80490155cb7c5dfaf8790d = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal32b9f4abfc80490155cb7c5dfaf8790d = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament-panels::components.tenant-menu','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -207,11 +207,11 @@
 <?php $component = $__componentOriginal32b9f4abfc80490155cb7c5dfaf8790d; ?>
 <?php unset($__componentOriginal32b9f4abfc80490155cb7c5dfaf8790d); ?>
 <?php endif; ?>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-            <!--[if BLOCK]><![endif]--><?php if($hasNavigation): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasNavigation): ?>
                 <ul class="fi-topbar-nav-groups">
-                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $navigation; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $navigation; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <?php
                             $groupLabel = $group->getLabel();
                             $groupExtraTopbarAttributeBag = $group->getExtraTopbarAttributeBag();
@@ -219,7 +219,7 @@
                             $groupIcon = $group->getIcon();
                         ?>
 
-                        <!--[if BLOCK]><![endif]--><?php if($groupLabel): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($groupLabel): ?>
                             <?php if (isset($component)) { $__componentOriginal22ab0dbc2c6619d5954111bba06f01db = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal22ab0dbc2c6619d5954111bba06f01db = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament::components.dropdown.index','data' => ['placement' => 'bottom-start','teleport' => true,'attributes' => \Filament\Support\prepare_inherited_attributes($groupExtraTopbarAttributeBag)]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -283,7 +283,7 @@
                                     }
                                 ?>
 
-                                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $lists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $list): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $lists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $list): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <?php if (isset($component)) { $__componentOriginal66687bf0670b9e16f61e667468dc8983 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal66687bf0670b9e16f61e667468dc8983 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament::components.dropdown.list.index','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -294,7 +294,7 @@
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-                                        <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <?php
                                                 $isItemActive = $item->isActive();
                                                 $itemBadge = $item->getBadge();
@@ -327,7 +327,7 @@
 <?php $component = $__componentOriginal1bd4d8e254cc40cdb05bd99df3e63f78; ?>
 <?php unset($__componentOriginal1bd4d8e254cc40cdb05bd99df3e63f78); ?>
 <?php endif; ?>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal66687bf0670b9e16f61e667468dc8983)): ?>
@@ -338,7 +338,7 @@
 <?php $component = $__componentOriginal66687bf0670b9e16f61e667468dc8983; ?>
 <?php unset($__componentOriginal66687bf0670b9e16f61e667468dc8983); ?>
 <?php endif; ?>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                              <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal22ab0dbc2c6619d5954111bba06f01db)): ?>
@@ -350,7 +350,7 @@
 <?php unset($__componentOriginal22ab0dbc2c6619d5954111bba06f01db); ?>
 <?php endif; ?>
                         <?php else: ?>
-                            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $group->getItems(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $group->getItems(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <?php
                                     $isItemActive = $item->isActive();
                                     $itemActiveIcon = $item->getActiveIcon();
@@ -384,12 +384,12 @@
 <?php $component = $__componentOriginal42035aa49c877d648231e14ff76681c7; ?>
 <?php unset($__componentOriginal42035aa49c877d648231e14ff76681c7); ?>
 <?php endif; ?>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 </ul>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
         <div
             <?php if($hasTenancy): ?>
@@ -402,14 +402,18 @@
             <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::GLOBAL_SEARCH_BEFORE)); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if(filament()->isGlobalSearchEnabled()): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filament()->isGlobalSearchEnabled()): ?>
                 <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];
 };
 [$__name, $__params] = $__split(Filament\Livewire\GlobalSearch::class);
 
-$__html = app('livewire')->mount($__name, $__params, 'lw-1707590915-0', $__slots ?? [], get_defined_vars());
+$key = null;
+
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-1707590915-0', null);
+
+$__html = app('livewire')->mount($__name, $__params, $key);
 
 echo $__html;
 
@@ -419,13 +423,13 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::GLOBAL_SEARCH_AFTER)); ?>
 
 
-            <?php if(filament()->auth()->check()): ?>
-                <?php if(filament()->hasDatabaseNotifications()): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filament()->auth()->check()): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filament()->hasDatabaseNotifications()): ?>
                     <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];
@@ -434,7 +438,11 @@ $__split = function ($name, $params = []) {
                         'lazy' => filament()->hasLazyLoadedDatabaseNotifications(),
                     ]);
 
-$__html = app('livewire')->mount($__name, $__params, 'lw-1707590915-1', $__slots ?? [], get_defined_vars());
+$key = null;
+
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-1707590915-1', null);
+
+$__html = app('livewire')->mount($__name, $__params, $key);
 
 echo $__html;
 
@@ -444,9 +452,9 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                <?php if(filament()->hasUserMenu()): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filament()->hasUserMenu()): ?>
                     <?php if (isset($component)) { $__componentOriginalf72c4437b846e6919081d8fc29939c50 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf72c4437b846e6919081d8fc29939c50 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament-panels::components.user-menu','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -467,8 +475,8 @@ if (isset($__slots)) unset($__slots);
 <?php $component = $__componentOriginalf72c4437b846e6919081d8fc29939c50; ?>
 <?php unset($__componentOriginalf72c4437b846e6919081d8fc29939c50); ?>
 <?php endif; ?>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
 
         <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::TOPBAR_END)); ?>

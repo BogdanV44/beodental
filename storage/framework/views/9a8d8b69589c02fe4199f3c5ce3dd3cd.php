@@ -110,7 +110,7 @@ unset($__defined_vars, $__key, $__value); ?>
             ])); ?>
 
 >
-    <!--[if BLOCK]><![endif]--><?php if($hasPrefix || $hasLoadingIndicator): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasPrefix || $hasLoadingIndicator): ?>
         <div
             <?php if(! $hasPrefix): ?>
                 wire:loading.delay.<?php echo e(config('filament.livewire_loading_delay', 'default')); ?>.flex
@@ -124,14 +124,14 @@ unset($__defined_vars, $__key, $__value); ?>
                 'fi-input-wrp-prefix-has-label' => filled($prefix),
             ]); ?>"
         >
-            <!--[if BLOCK]><![endif]--><?php if(count($prefixActions)): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($prefixActions)): ?>
                 <div class="fi-input-wrp-actions">
-                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $prefixActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prefixAction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $prefixActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prefixAction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <?php echo e($prefixAction); ?>
 
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 </div>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e(\Filament\Support\generate_icon_html($prefixIcon, $prefixIconAlias, (new \Illuminate\View\ComponentAttributeBag)
                     ->merge([
@@ -141,22 +141,22 @@ unset($__defined_vars, $__key, $__value); ?>
                     ->color(IconComponent::class, $prefixIconColor))); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if($hasLoadingIndicator): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasLoadingIndicator): ?>
                 <?php echo e(\Filament\Support\generate_loading_indicator_html((new \Illuminate\View\ComponentAttributeBag([
                         'wire:loading.delay.' . config('filament.livewire_loading_delay', 'default') => $hasPrefix,
                         'wire:target' => $hasPrefix ? $loadingIndicatorTarget : null,
                     ]))->color(IconComponent::class, 'gray'))); ?>
 
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-            <!--[if BLOCK]><![endif]--><?php if(filled($prefix)): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($prefix)): ?>
                 <span class="fi-input-wrp-label">
                     <?php echo e($prefix); ?>
 
                 </span>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
     <div
         <?php if($hasLoadingIndicator && (! $hasPrefix)): ?>
@@ -175,7 +175,7 @@ unset($__defined_vars, $__key, $__value); ?>
 
     </div>
 
-    <!--[if BLOCK]><![endif]--><?php if($hasSuffix): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasSuffix): ?>
         <div
             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                 'fi-input-wrp-suffix',
@@ -183,12 +183,12 @@ unset($__defined_vars, $__key, $__value); ?>
                 'fi-input-wrp-suffix-has-label' => filled($suffix),
             ]); ?>"
         >
-            <!--[if BLOCK]><![endif]--><?php if(filled($suffix)): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($suffix)): ?>
                 <span class="fi-input-wrp-label">
                     <?php echo e($suffix); ?>
 
                 </span>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e(\Filament\Support\generate_icon_html($suffixIcon, $suffixIconAlias, (new \Illuminate\View\ComponentAttributeBag)
                     ->merge([
@@ -198,15 +198,15 @@ unset($__defined_vars, $__key, $__value); ?>
                     ->color(IconComponent::class, $suffixIconColor))); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if(count($suffixActions)): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($suffixActions)): ?>
                 <div class="fi-input-wrp-actions">
-                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $suffixActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $suffixAction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $suffixActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $suffixAction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <?php echo e($suffixAction); ?>
 
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 </div>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 </div>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\support\resources\views/components/input/wrapper.blade.php ENDPATH**/ ?>

@@ -46,7 +46,7 @@ unset($__defined_vars, $__key, $__value); ?>
 
 >
     <div>
-        <!--[if BLOCK]><![endif]--><?php if($breadcrumbs): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($breadcrumbs): ?>
             <?php if (isset($component)) { $__componentOriginale1cebc129855f156aa8f78d22103aca1 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginale1cebc129855f156aa8f78d22103aca1 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament::components.breadcrumbs','data' => ['breadcrumbs' => $breadcrumbs]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -67,19 +67,19 @@ unset($__defined_vars, $__key, $__value); ?>
 <?php $component = $__componentOriginale1cebc129855f156aa8f78d22103aca1; ?>
 <?php unset($__componentOriginale1cebc129855f156aa8f78d22103aca1); ?>
 <?php endif; ?>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
         <h1 class="fi-header-heading">
             <?php echo e($heading); ?>
 
         </h1>
 
-        <!--[if BLOCK]><![endif]--><?php if($subheading): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($subheading): ?>
             <p class="fi-header-subheading">
                 <?php echo e($subheading); ?>
 
             </p>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </div>
 
     <?php
@@ -87,12 +87,12 @@ unset($__defined_vars, $__key, $__value); ?>
         $afterActions = \Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_HEADER_ACTIONS_AFTER, scopes: $this->getRenderHookScopes());
     ?>
 
-    <!--[if BLOCK]><![endif]--><?php if(filled($beforeActions) || $actions || filled($afterActions)): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($beforeActions) || $actions || filled($afterActions)): ?>
         <div class="fi-header-actions-ctn">
             <?php echo e($beforeActions); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if($actions): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($actions): ?>
                 <?php if (isset($component)) { $__componentOriginal59d80b1aec4ae4c914a3e52dede19504 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal59d80b1aec4ae4c914a3e52dede19504 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament::components.actions','data' => ['actions' => $actions]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -113,11 +113,11 @@ unset($__defined_vars, $__key, $__value); ?>
 <?php $component = $__componentOriginal59d80b1aec4ae4c914a3e52dede19504; ?>
 <?php unset($__componentOriginal59d80b1aec4ae4c914a3e52dede19504); ?>
 <?php endif; ?>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e($afterActions); ?>
 
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 </header>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\filament\resources\views/components/header/index.blade.php ENDPATH**/ ?>

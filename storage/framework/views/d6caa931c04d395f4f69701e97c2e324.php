@@ -92,11 +92,11 @@ unset($__defined_vars, $__key, $__value); ?>
     <?php echo e($form); ?>
 
 
-    <!--[if BLOCK]><![endif]--><?php if($applyAction->isVisible()): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($applyAction->isVisible()): ?>
         <div class="fi-ta-filters-apply-action-ctn">
             <?php echo e($applyAction); ?>
 
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 </div>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\tables\resources\views/components/filters.blade.php ENDPATH**/ ?>

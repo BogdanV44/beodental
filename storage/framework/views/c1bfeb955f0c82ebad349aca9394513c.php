@@ -63,9 +63,9 @@ unset($__defined_vars, $__key, $__value); ?>
         <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::SIMPLE_LAYOUT_START, scopes: $renderHookScopes)); ?>
 
 
-        <?php if(($hasTopbar ?? true) && filament()->auth()->check()): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(($hasTopbar ?? true) && filament()->auth()->check()): ?>
             <div class="fi-simple-layout-header">
-                <?php if(filament()->hasDatabaseNotifications()): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filament()->hasDatabaseNotifications()): ?>
                     <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];
@@ -74,7 +74,11 @@ $__split = function ($name, $params = []) {
                         'lazy' => filament()->hasLazyLoadedDatabaseNotifications(),
                     ]);
 
-$__html = app('livewire')->mount($__name, $__params, 'lw-45984907-0', $__slots ?? [], get_defined_vars());
+$key = null;
+
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-45984907-0', null);
+
+$__html = app('livewire')->mount($__name, $__params, $key);
 
 echo $__html;
 
@@ -84,16 +88,20 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
-                <?php endif; ?>
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                <?php if(filament()->hasUserMenu()): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filament()->hasUserMenu()): ?>
                     <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];
 };
 [$__name, $__params] = $__split(Filament\Livewire\SimpleUserMenu::class);
 
-$__html = app('livewire')->mount($__name, $__params, 'lw-45984907-1', $__slots ?? [], get_defined_vars());
+$key = null;
+
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-45984907-1', null);
+
+$__html = app('livewire')->mount($__name, $__params, $key);
 
 echo $__html;
 
@@ -103,9 +111,9 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
-                <?php endif; ?>
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
             </div>
-        <?php endif; ?>
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
         <div class="fi-simple-main-ctn">
             <main

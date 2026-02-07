@@ -96,23 +96,23 @@ unset($__defined_vars, $__key, $__value); ?>
             ])); ?>
 
 >
-    <!--[if BLOCK]><![endif]--><?php if($icon && $iconPosition === IconPosition::Before): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($icon && $iconPosition === IconPosition::Before): ?>
         <?php echo e(\Filament\Support\generate_icon_html($icon)); ?>
 
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
     <span class="fi-tabs-item-label">
         <?php echo e($slot); ?>
 
     </span>
 
-    <!--[if BLOCK]><![endif]--><?php if($icon && $iconPosition === IconPosition::After): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($icon && $iconPosition === IconPosition::After): ?>
         <?php echo e(\Filament\Support\generate_icon_html($icon)); ?>
 
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if(filled($badge)): ?>
-        <!--[if BLOCK]><![endif]--><?php if($badge instanceof \Illuminate\View\ComponentSlot): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($badge)): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($badge instanceof \Illuminate\View\ComponentSlot): ?>
             <?php echo e($badge); ?>
 
         <?php else: ?>
@@ -138,7 +138,7 @@ unset($__defined_vars, $__key, $__value); ?>
 <?php $component = $__componentOriginal986dce9114ddce94a270ab00ce6c273d; ?>
 <?php unset($__componentOriginal986dce9114ddce94a270ab00ce6c273d); ?>
 <?php endif; ?>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 </<?php echo e($tag); ?>>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\support\resources\views/components/tabs/item.blade.php ENDPATH**/ ?>

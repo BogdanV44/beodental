@@ -15,7 +15,7 @@
         </div>
 
         <div class="row">
-            <?php $__currentLoopData = $dentists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dentist): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $dentists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dentist): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php if (isset($component)) { $__componentOriginal044bed0acbeff88db7e27790ae302fa2 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal044bed0acbeff88db7e27790ae302fa2 = $attributes; } ?>
 <?php $component = App\View\Components\SingleTeamMember::resolve(['id' => $dentist->dentist_id,'imageName' => $dentist->image_route,'dentistName' => $dentist->full_name,'title' => $dentist->title] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -36,7 +36,7 @@
 <?php $component = $__componentOriginal044bed0acbeff88db7e27790ae302fa2; ?>
 <?php unset($__componentOriginal044bed0acbeff88db7e27790ae302fa2); ?>
 <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
     </div>
     <!-- Icon Start Image Start -->

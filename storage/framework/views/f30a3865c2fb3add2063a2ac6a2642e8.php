@@ -9,7 +9,7 @@
     $renderHookScopes = $getRenderHookScopes();
 ?>
 
-<!--[if BLOCK]><![endif]--><?php if(blank($livewireProperty)): ?>
+<?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(blank($livewireProperty)): ?>
     <div
         x-load
         x-load-src="<?php echo e(\Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('tabs', 'filament/schemas')); ?>"
@@ -55,12 +55,12 @@
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['contained' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($isContained),'label' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($label),'vertical' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($isVertical),'x-cloak' => true]); ?>
-            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $getStartRenderHooks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $startRenderHook): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $getStartRenderHooks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $startRenderHook): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook($startRenderHook, scopes: $renderHookScopes)); ?>
 
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $getChildSchema()->getComponents(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $getChildSchema()->getComponents(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php
                     $tabKey = $tab->getKey(isAbsolute: false);
                     $tabBadge = $tab->getBadge();
@@ -95,12 +95,12 @@
 <?php $component = $__componentOriginal35d4caf141547fb7d125e4ebd3c1b66f; ?>
 <?php unset($__componentOriginal35d4caf141547fb7d125e4ebd3c1b66f); ?>
 <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $getEndRenderHooks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $endRenderHook): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $getEndRenderHooks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $endRenderHook): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook($endRenderHook, scopes: $renderHookScopes)); ?>
 
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
          <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal447636fe67a19f9c79619fb5a3c0c28d)): ?>
@@ -112,10 +112,10 @@
 <?php unset($__componentOriginal447636fe67a19f9c79619fb5a3c0c28d); ?>
 <?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $getChildSchema()->getComponents(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $getChildSchema()->getComponents(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php echo e($tab); ?>
 
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </div>
 <?php else: ?>
     <?php
@@ -146,12 +146,12 @@
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['contained' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($isContained),'label' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($label),'vertical' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($isVertical)]); ?>
-            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $getStartRenderHooks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $startRenderHook): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $getStartRenderHooks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $startRenderHook): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook($startRenderHook, scopes: $renderHookScopes)); ?>
 
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-            <?php $__currentLoopData = $getChildSchema()->getComponents(withOriginalKeys: true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tabKey => $tab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $getChildSchema()->getComponents(withOriginalKeys: true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tabKey => $tab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php
                     $tabBadge = $tab->getBadge();
                     $tabBadgeColor = $tab->getBadgeColor();
@@ -186,12 +186,12 @@
 <?php $component = $__componentOriginal35d4caf141547fb7d125e4ebd3c1b66f; ?>
 <?php unset($__componentOriginal35d4caf141547fb7d125e4ebd3c1b66f); ?>
 <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $getEndRenderHooks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $endRenderHook): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $getEndRenderHooks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $endRenderHook): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook($endRenderHook, scopes: $renderHookScopes)); ?>
 
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
          <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal447636fe67a19f9c79619fb5a3c0c28d)): ?>
@@ -203,10 +203,10 @@
 <?php unset($__componentOriginal447636fe67a19f9c79619fb5a3c0c28d); ?>
 <?php endif; ?>
 
-        <?php $__currentLoopData = $getChildSchema()->getComponents(withOriginalKeys: true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tabKey => $tab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $getChildSchema()->getComponents(withOriginalKeys: true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tabKey => $tab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php echo e($tab->key($tabKey)); ?>
 
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </div>
-<?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\schemas\resources\views/components/tabs.blade.php ENDPATH**/ ?>

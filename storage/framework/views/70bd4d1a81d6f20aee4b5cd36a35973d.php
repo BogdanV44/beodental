@@ -8,8 +8,8 @@
     $childSchema = $getChildSchema();
 ?>
 
-<!--[if BLOCK]><![endif]--><?php if(! empty($childSchema->getComponents())): ?>
-    <!--[if BLOCK]><![endif]--><?php if(blank($livewireProperty)): ?>
+<?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! empty($childSchema->getComponents())): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(blank($livewireProperty)): ?>
         <div
             x-bind:class="{
                 'fi-active': tab === <?php echo \Illuminate\Support\Js::from($key)->toHtml() ?>,
@@ -47,6 +47,6 @@
             <?php echo e($childSchema); ?>
 
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-<?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\schemas\resources\views/components/tabs/tab.blade.php ENDPATH**/ ?>

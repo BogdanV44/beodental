@@ -36,7 +36,7 @@
         'fi-body-has-sidebar-fully-collapsible-on-desktop' => $isSidebarFullyCollapsibleOnDesktop,
         'fi-body-has-top-navigation' => $hasTopNavigation,
     ]))]); ?>
-    <?php if($hasTopbar): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasTopbar): ?>
         <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::TOPBAR_BEFORE, scopes: $renderHookScopes)); ?>
 
 
@@ -46,7 +46,11 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split(filament()->getTopbarLivewireComponent());
 
-$__html = app('livewire')->mount($__name, $__params, 'lw-1756923261-0', $__slots ?? [], get_defined_vars());
+$key = null;
+
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-1756923261-0', null);
+
+$__html = app('livewire')->mount($__name, $__params, $key);
 
 echo $__html;
 
@@ -59,14 +63,14 @@ if (isset($__slots)) unset($__slots);
 
         <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::TOPBAR_AFTER, scopes: $renderHookScopes)); ?>
 
-    <?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
     
     <div class="fi-layout">
         <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::LAYOUT_START, scopes: $renderHookScopes)); ?>
 
 
-        <?php if($hasNavigation): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasNavigation): ?>
             <div
                 x-cloak
                 x-data="{}"
@@ -82,7 +86,11 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split(filament()->getSidebarLivewireComponent());
 
-$__html = app('livewire')->mount($__name, $__params, 'lw-1756923261-1', $__slots ?? [], get_defined_vars());
+$key = null;
+
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-1756923261-1', null);
+
+$__html = app('livewire')->mount($__name, $__params, $key);
 
 echo $__html;
 
@@ -92,7 +100,7 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
-        <?php endif; ?>
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
         <div
             <?php if($isSidebarCollapsibleOnDesktop): ?>

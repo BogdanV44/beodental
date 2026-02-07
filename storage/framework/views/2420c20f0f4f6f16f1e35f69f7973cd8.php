@@ -24,7 +24,7 @@
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::SIDEBAR_LOGO_BEFORE)); ?>
 
 
-	            <!--[if BLOCK]><![endif]--><?php if($homeUrl = filament()->getHomeUrl()): ?>
+	            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($homeUrl = filament()->getHomeUrl()): ?>
                     <a <?php echo e(\Filament\Support\generate_href_html($homeUrl)); ?>>
                         <?php if (isset($component)) { $__componentOriginalb501e8c73315a10eb0eb5fd14fda0d94 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalb501e8c73315a10eb0eb5fd14fda0d94 = $attributes; } ?>
@@ -68,7 +68,7 @@
 <?php $component = $__componentOriginalb501e8c73315a10eb0eb5fd14fda0d94; ?>
 <?php unset($__componentOriginalb501e8c73315a10eb0eb5fd14fda0d94); ?>
 <?php endif; ?>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::SIDEBAR_LOGO_AFTER)); ?>
 
@@ -79,7 +79,7 @@
             <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::SIDEBAR_NAV_START)); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if(filament()->hasTenancy() && filament()->hasTenantMenu()): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filament()->hasTenancy() && filament()->hasTenantMenu()): ?>
                 <div
                     class="fi-sidebar-nav-tenant-menu-ctn"
                 >
@@ -104,10 +104,10 @@
 <?php unset($__componentOriginal32b9f4abfc80490155cb7c5dfaf8790d); ?>
 <?php endif; ?>
                 </div>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <ul class="fi-sidebar-nav-groups">
-                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $navigation; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $navigation; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php
                         $isGroupActive = $group->isActive();
                         $isGroupCollapsible = $group->isCollapsible();
@@ -137,7 +137,7 @@
 <?php $component = $__componentOriginal59b772cc9788bdb14bf9872624b4f33a; ?>
 <?php unset($__componentOriginal59b772cc9788bdb14bf9872624b4f33a); ?>
 <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
             </ul>
 
             <script>

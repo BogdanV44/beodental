@@ -29,13 +29,13 @@
 <?php $attributes = $attributes->except(\Illuminate\View\DynamicComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['field' => $field,'inline-label-vertical-alignment' => \Filament\Support\Enums\VerticalAlignment::Center]); ?>
-    <!--[if BLOCK]><![endif]--><?php if($isInline()): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isInline()): ?>
          <?php $__env->slot('labelPrefix', null, []); ?> 
             <input type="checkbox" <?php echo e($attributes); ?> />
          <?php $__env->endSlot(); ?>
     <?php else: ?>
         <input type="checkbox" <?php echo e($attributes); ?> />
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal511d4862ff04963c3c16115c05a86a9d)): ?>

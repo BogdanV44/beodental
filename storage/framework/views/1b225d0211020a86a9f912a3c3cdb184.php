@@ -119,7 +119,7 @@ unset($__defined_vars, $__key, $__value); ?>
     $hasTooltip = filled($tooltip);
 ?>
 
-<!--[if BLOCK]><![endif]--><?php if($labeledFrom): ?>
+<?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($labeledFrom): ?>
     <?php if (isset($component)) { $__componentOriginalf0029cce6d19fd6d472097ff06a800a1 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf0029cce6d19fd6d472097ff06a800a1 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament::components.icon-button','data' => ['badge' => $badge,'badgeColor' => $badgeColor,'badgeSize' => $badgeSize,'color' => $color,'disabled' => $disabled,'form' => $form,'formId' => $formId,'href' => $href,'icon' => $icon,'iconAlias' => $iconAlias,'iconSize' => $iconSize,'keyBindings' => $keyBindings,'label' => $slot,'loadingIndicator' => $loadingIndicator,'size' => $size,'spaMode' => $spaMode,'tag' => $tag,'target' => $target,'tooltip' => $tooltip,'type' => $type,'attributes' => \Filament\Support\prepare_inherited_attributes($attributes)]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -140,7 +140,7 @@ unset($__defined_vars, $__key, $__value); ?>
 <?php $component = $__componentOriginalf0029cce6d19fd6d472097ff06a800a1; ?>
 <?php unset($__componentOriginalf0029cce6d19fd6d472097ff06a800a1); ?>
 <?php endif; ?>
-<?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
 <<?php echo e($tag); ?>
 
@@ -190,34 +190,34 @@ unset($__defined_vars, $__key, $__value); ?>
             ->color(app(ButtonComponent::class, ['isOutlined' => $outlined]), $color)); ?>
 
 >
-    <!--[if BLOCK]><![endif]--><?php if($iconPosition === IconPosition::Before): ?>
-        <!--[if BLOCK]><![endif]--><?php if($icon): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($iconPosition === IconPosition::Before): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($icon): ?>
             <?php echo e(\Filament\Support\generate_icon_html($icon, $iconAlias, (new \Illuminate\View\ComponentAttributeBag([
                     'wire:loading.remove.delay.' . config('filament.livewire_loading_delay', 'default') => $hasLoadingIndicator,
                     'wire:target' => $hasLoadingIndicator ? $loadingIndicatorTarget : false,
                 ])), size: $iconSize)); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if($hasLoadingIndicator): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasLoadingIndicator): ?>
             <?php echo e(\Filament\Support\generate_loading_indicator_html((new \Illuminate\View\ComponentAttributeBag([
                     'wire:loading.delay.' . config('filament.livewire_loading_delay', 'default') => '',
                     'wire:target' => $loadingIndicatorTarget,
                 ])), size: $iconSize)); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if($hasFormProcessingLoadingIndicator): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFormProcessingLoadingIndicator): ?>
             <?php echo e(\Filament\Support\generate_loading_indicator_html((new \Illuminate\View\ComponentAttributeBag([
                     'x-cloak' => 'x-cloak',
                     'x-show' => 'isProcessing',
                 ])), size: $iconSize)); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if(! $labelSrOnly): ?>
-        <!--[if BLOCK]><![endif]--><?php if($hasFormProcessingLoadingIndicator): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $labelSrOnly): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFormProcessingLoadingIndicator): ?>
             <span x-show="! isProcessing">
                 <?php echo e($slot); ?>
 
@@ -225,46 +225,46 @@ unset($__defined_vars, $__key, $__value); ?>
         <?php else: ?>
             <?php echo e($slot); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if($hasFormProcessingLoadingIndicator && (! $labelSrOnly)): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFormProcessingLoadingIndicator && (! $labelSrOnly)): ?>
         <span
             x-cloak
             x-show="isProcessing"
             x-text="processingMessage"
         ></span>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if($iconPosition === IconPosition::After): ?>
-        <!--[if BLOCK]><![endif]--><?php if($icon): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($iconPosition === IconPosition::After): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($icon): ?>
             <?php echo e(\Filament\Support\generate_icon_html($icon, $iconAlias, (new \Illuminate\View\ComponentAttributeBag([
                     'wire:loading.remove.delay.' . config('filament.livewire_loading_delay', 'default') => $hasLoadingIndicator,
                     'wire:target' => $hasLoadingIndicator ? $loadingIndicatorTarget : false,
                 ])), size: $iconSize)); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if($hasLoadingIndicator): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasLoadingIndicator): ?>
             <?php echo e(\Filament\Support\generate_loading_indicator_html((new \Illuminate\View\ComponentAttributeBag([
                     'wire:loading.delay.' . config('filament.livewire_loading_delay', 'default') => '',
                     'wire:target' => $loadingIndicatorTarget,
                 ])), size: $iconSize)); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if($hasFormProcessingLoadingIndicator): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFormProcessingLoadingIndicator): ?>
             <?php echo e(\Filament\Support\generate_loading_indicator_html((new \Illuminate\View\ComponentAttributeBag([
                     'x-cloak' => 'x-cloak',
                     'x-show' => 'isProcessing',
                 ])), size: $iconSize)); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if(filled($badge)): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($badge)): ?>
         <div class="fi-btn-badge-ctn">
-            <!--[if BLOCK]><![endif]--><?php if($badge instanceof \Illuminate\View\ComponentSlot): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($badge instanceof \Illuminate\View\ComponentSlot): ?>
                 <?php echo e($badge); ?>
 
             <?php else: ?>
@@ -278,8 +278,8 @@ unset($__defined_vars, $__key, $__value); ?>
                     <?php echo e($badge); ?>
 
                 </span>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 </<?php echo e($tag); ?>>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\support\resources\views/components/button/index.blade.php ENDPATH**/ ?>

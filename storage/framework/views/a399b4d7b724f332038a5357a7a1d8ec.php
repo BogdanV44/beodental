@@ -168,7 +168,7 @@
             <?php echo e(FilamentView::renderHook(TablesRenderHook::HEADER_BEFORE, scopes: static::class)); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if($header): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($header): ?>
                 <?php echo e($header); ?>
 
             <?php elseif(($heading || $description || $headerActions) && ! $isReordering): ?>
@@ -178,9 +178,9 @@
                         'fi-ta-header-adaptive-actions-position' => $headerActions && ($headerActionsPosition === HeaderActionsPosition::Adaptive),
                     ]); ?>"
                 >
-                    <!--[if BLOCK]><![endif]--><?php if($heading || $description): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($heading || $description): ?>
                         <div>
-                            <!--[if BLOCK]><![endif]--><?php if($heading): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($heading): ?>
                                 <<?php echo e($headingTag); ?>
 
                                     class="fi-ta-header-heading"
@@ -188,32 +188,32 @@
                                     <?php echo e($heading); ?>
 
                                 </<?php echo e($headingTag); ?>>
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                            <!--[if BLOCK]><![endif]--><?php if($description): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($description): ?>
                                 <p class="fi-ta-header-description">
                                     <?php echo e($description); ?>
 
                                 </p>
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                         </div>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                    <!--[if BLOCK]><![endif]--><?php if((! $isReordering) && $headerActions): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((! $isReordering) && $headerActions): ?>
                         <div class="fi-ta-actions fi-align-start fi-wrapped">
-                            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $headerActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $headerActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <?php echo e($action); ?>
 
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                         </div>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 </div>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e(FilamentView::renderHook(TablesRenderHook::HEADER_AFTER, scopes: static::class)); ?>
 
 
-            <!--[if BLOCK]><![endif]--><?php if($hasFiltersAboveContent): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFiltersAboveContent): ?>
                 <div
                     x-data="{ areFiltersOpen: <?php echo \Illuminate\Support\Js::from(! $hasFiltersAboveContentCollapsible)->toHtml() ?> }"
                     x-bind:class="{ 'fi-open': areFiltersOpen }"
@@ -242,7 +242,7 @@
 <?php unset($__componentOriginal8fcc8bb3dcedd6e3c85ec7cd95e48b39); ?>
 <?php endif; ?>
 
-                    <!--[if BLOCK]><![endif]--><?php if($hasFiltersAboveContentCollapsible): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFiltersAboveContentCollapsible): ?>
                         <span
                             x-on:click="areFiltersOpen = ! areFiltersOpen"
                             class="fi-ta-filters-trigger-action-ctn"
@@ -250,9 +250,9 @@
                             <?php echo e($filtersTriggerAction->badge($activeFiltersCount)); ?>
 
                         </span>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 </div>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_BEFORE, scopes: static::class)); ?>
 
@@ -269,25 +269,25 @@
                     <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_REORDER_TRIGGER_BEFORE, scopes: static::class)); ?>
 
 
-                    <!--[if BLOCK]><![endif]--><?php if($isReorderable): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isReorderable): ?>
                         <?php echo e($reorderRecordsTriggerAction); ?>
 
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                     <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_REORDER_TRIGGER_AFTER, scopes: static::class)); ?>
 
 
-                    <?php if((! $isReordering) && count($toolbarActions)): ?>
-                        <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $toolbarActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((! $isReordering) && count($toolbarActions)): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $toolbarActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <?php echo e($action); ?>
 
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                     <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_GROUPING_SELECTOR_BEFORE, scopes: static::class)); ?>
 
 
-                    <!--[if BLOCK]><![endif]--><?php if($areGroupingSettingsVisible): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($areGroupingSettingsVisible): ?>
                         <div
                             x-data="{
                                 grouping: $wire.$entangle('tableGrouping', true),
@@ -384,14 +384,14 @@
 <?php $component->withAttributes(['x-model' => 'group','x-on:change' => 'resetCollapsedGroups()']); ?>
                                                 <option value="">-</option>
 
-                                                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $groupOption): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $groupOption): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <option
                                                         value="<?php echo e($groupOption->getId()); ?>"
                                                     >
                                                         <?php echo e($groupOption->getLabel()); ?>
 
                                                     </option>
-                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                              <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal97dc683fe4ff7acce9e296503563dd85)): ?>
@@ -414,7 +414,7 @@
 <?php endif; ?>
                                     </label>
 
-                                    <!--[if BLOCK]><![endif]--><?php if(! $isGroupingDirectionSettingHidden): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $isGroupingDirectionSettingHidden): ?>
                                         <label x-cloak x-show="group">
                                             <span>
                                                 <?php echo e(__('filament-tables::table.grouping.fields.direction.label')); ?>
@@ -471,7 +471,7 @@
 <?php unset($__componentOriginal505efd9768415fdb4543e8c564dad437); ?>
 <?php endif; ?>
                                         </label>
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                 </div>
                              <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
@@ -484,7 +484,7 @@
 <?php unset($__componentOriginal22ab0dbc2c6619d5954111bba06f01db); ?>
 <?php endif; ?>
 
-                            <!--[if BLOCK]><![endif]--><?php if(! $areGroupingSettingsInDropdownOnDesktop): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $areGroupingSettingsInDropdownOnDesktop): ?>
                                 <div class="fi-ta-grouping-settings-fields">
                                     <label>
                                         <?php if (isset($component)) { $__componentOriginal505efd9768415fdb4543e8c564dad437 = $component; } ?>
@@ -509,14 +509,14 @@
 <?php $component->withAttributes(['x-model' => 'group','x-on:change' => 'resetCollapsedGroups()']); ?>
                                                 <option value="">-</option>
 
-                                                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $groupOption): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $groupOption): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <option
                                                         value="<?php echo e($groupOption->getId()); ?>"
                                                     >
                                                         <?php echo e($groupOption->getLabel()); ?>
 
                                                     </option>
-                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                              <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal97dc683fe4ff7acce9e296503563dd85)): ?>
@@ -539,7 +539,7 @@
 <?php endif; ?>
                                     </label>
 
-                                    <!--[if BLOCK]><![endif]--><?php if(! $isGroupingDirectionSettingHidden): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $isGroupingDirectionSettingHidden): ?>
                                         <label x-cloak x-show="group">
                                             <span class="fi-sr-only">
                                                 <?php echo e(__('filament-tables::table.grouping.fields.direction.label')); ?>
@@ -596,22 +596,22 @@
 <?php unset($__componentOriginal505efd9768415fdb4543e8c564dad437); ?>
 <?php endif; ?>
                                         </label>
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                 </div>
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                         </div>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                     <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_GROUPING_SELECTOR_AFTER, scopes: static::class)); ?>
 
                 </div>
 
-                <!--[if BLOCK]><![endif]--><?php if($isGlobalSearchVisible || $hasFiltersDialog || $hasColumnManagerDropdown): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isGlobalSearchVisible || $hasFiltersDialog || $hasColumnManagerDropdown): ?>
                     <div>
                         <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_SEARCH_BEFORE, scopes: static::class)); ?>
 
 
-                        <!--[if BLOCK]><![endif]--><?php if($isGlobalSearchVisible): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isGlobalSearchVisible): ?>
                             <?php
                                 $searchPlaceholder = $getSearchPlaceholder();
                             ?>
@@ -636,14 +636,14 @@
 <?php $component = $__componentOriginal7ccc00a3eaa8946ec9c0ec17f5ab229b; ?>
 <?php unset($__componentOriginal7ccc00a3eaa8946ec9c0ec17f5ab229b); ?>
 <?php endif; ?>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                         <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_SEARCH_AFTER, scopes: static::class)); ?>
 
 
-                        <!--[if BLOCK]><![endif]--><?php if($hasFiltersDialog || $hasColumnManagerDropdown): ?>
-                            <!--[if BLOCK]><![endif]--><?php if($hasFiltersDialog): ?>
-                                <!--[if BLOCK]><![endif]--><?php if(($filtersLayout === FiltersLayout::Modal) || $filtersTriggerAction->isModalSlideOver()): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFiltersDialog || $hasColumnManagerDropdown): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFiltersDialog): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(($filtersLayout === FiltersLayout::Modal) || $filtersTriggerAction->isModalSlideOver()): ?>
                                     <?php
                                         $filtersTriggerActionModalAlignment = $filtersTriggerAction->getModalAlignment();
                                         $filtersTriggerActionIsModalAutofocused = $filtersTriggerAction->isModalAutofocused();
@@ -744,13 +744,13 @@
 <?php $component = $__componentOriginal22ab0dbc2c6619d5954111bba06f01db; ?>
 <?php unset($__componentOriginal22ab0dbc2c6619d5954111bba06f01db); ?>
 <?php endif; ?>
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                             <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_COLUMN_MANAGER_TRIGGER_BEFORE, scopes: static::class)); ?>
 
 
-                            <!--[if BLOCK]><![endif]--><?php if($hasColumnManagerDropdown): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasColumnManagerDropdown): ?>
                                 <?php
                                     $columnManagerMaxHeight = $getColumnManagerMaxHeight();
                                     $columnManagerWidth = $getColumnManagerWidth();
@@ -802,13 +802,13 @@
 <?php $component = $__componentOriginal22ab0dbc2c6619d5954111bba06f01db; ?>
 <?php unset($__componentOriginal22ab0dbc2c6619d5954111bba06f01db); ?>
 <?php endif; ?>
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                             <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_COLUMN_MANAGER_TRIGGER_AFTER, scopes: static::class)); ?>
 
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                     </div>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                 <?php echo e(FilamentView::renderHook(TablesRenderHook::TOOLBAR_END)); ?>
 
@@ -818,7 +818,7 @@
 
         </div>
 
-        <!--[if BLOCK]><![endif]--><?php if($isReordering): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isReordering): ?>
             <div
                 x-cloak
                 wire:key="<?php echo e($this->getId()); ?>.table.reorder.indicator"
@@ -856,7 +856,7 @@
                     ></span>
                 </div>
 
-                <!--[if BLOCK]><![endif]--><?php if(! $isSelectionDisabled): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $isSelectionDisabled): ?>
                     <div>
                         <?php echo e(FilamentView::renderHook(TablesRenderHook::SELECTION_INDICATOR_ACTIONS_BEFORE, scopes: static::class)); ?>
 
@@ -912,12 +912,12 @@
                         <?php echo e(FilamentView::renderHook(TablesRenderHook::SELECTION_INDICATOR_ACTIONS_AFTER, scopes: static::class)); ?>
 
                     </div>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
             </div>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if($filterIndicators): ?>
-            <!--[if BLOCK]><![endif]--><?php if(filled($filterIndicatorsView = FilamentView::renderHook(TablesRenderHook::FILTER_INDICATORS, scopes: static::class, data: ['filterIndicators' => $filterIndicators]))): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($filterIndicators): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($filterIndicatorsView = FilamentView::renderHook(TablesRenderHook::FILTER_INDICATORS, scopes: static::class, data: ['filterIndicators' => $filterIndicators]))): ?>
                 <?php echo e($filterIndicatorsView); ?>
 
             <?php else: ?>
@@ -929,7 +929,7 @@
                         </span>
 
                         <div class="fi-ta-filter-indicators-badges-ctn">
-                            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $filterIndicators; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $indicator): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $filterIndicators; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $indicator): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <?php
                                     $indicatorColor = $indicator->getColor();
                                 ?>
@@ -947,13 +947,13 @@
                                     <?php echo e($indicator->getLabel()); ?>
 
 
-                                    <!--[if BLOCK]><![endif]--><?php if($indicator->isRemovable()): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($indicator->isRemovable()): ?>
                                         <?php
                                             $indicatorRemoveLivewireClickHandler = $indicator->getRemoveLivewireClickHandler();
                                         ?>
 
                                          <?php $__env->slot('deleteButton', null, ['label' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('filament-tables::table.filters.actions.remove.label')),'wire:click' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($indicatorRemoveLivewireClickHandler),'wire:loading.attr' => 'disabled','wire:target' => 'removeTableFilter']); ?>  <?php $__env->endSlot(); ?>
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal986dce9114ddce94a270ab00ce6c273d)): ?>
@@ -964,11 +964,11 @@
 <?php $component = $__componentOriginal986dce9114ddce94a270ab00ce6c273d; ?>
 <?php unset($__componentOriginal986dce9114ddce94a270ab00ce6c273d); ?>
 <?php endif; ?>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                         </div>
                     </div>
 
-                    <!--[if BLOCK]><![endif]--><?php if(collect($filterIndicators)->contains(fn (\Filament\Tables\Filters\Indicator $indicator): bool => $indicator->isRemovable())): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(collect($filterIndicators)->contains(fn (\Filament\Tables\Filters\Indicator $indicator): bool => $indicator->isRemovable())): ?>
                         <button
                             type="button"
                             x-tooltip="{
@@ -983,12 +983,12 @@
                             <?php echo e(\Filament\Support\generate_icon_html(\Filament\Support\Icons\Heroicon::XMark, alias: \Filament\Tables\View\TablesIconAlias::FILTERS_REMOVE_ALL_BUTTON, size: \Filament\Support\Enums\IconSize::Small)); ?>
 
                         </button>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 </div>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if(((! $content) && (! $hasColumnsLayout)) || ($records === null) || count($records)): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(((! $content) && (! $hasColumnsLayout)) || ($records === null) || count($records)): ?>
             <div
                 <?php if((! $isReordering) && ($pollingInterval = $getPollingInterval())): ?>
                     wire:poll.<?php echo e($pollingInterval); ?>
@@ -996,8 +996,8 @@
                 <?php endif; ?>
                 class="fi-ta-content-ctn"
             >
-                <!--[if BLOCK]><![endif]--><?php if(($content || $hasColumnsLayout) && ($records !== null) && count($records)): ?>
-                    <!--[if BLOCK]><![endif]--><?php if(! $isReordering): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(($content || $hasColumnsLayout) && ($records !== null) && count($records)): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $isReordering): ?>
                         <?php
                             $sortableColumns = array_filter(
                                 $columns,
@@ -1005,9 +1005,9 @@
                             );
                         ?>
 
-                        <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled || count($sortableColumns)): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled || count($sortableColumns)): ?>
                             <div class="fi-ta-content-header">
-                                <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && ($maxSelectableRecords !== 1) && (! $isReordering)): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && ($maxSelectableRecords !== 1) && (! $isReordering)): ?>
                                     <input
                                         aria-label="<?php echo e(__('filament-tables::table.fields.bulk_select_page.label')); ?>"
                                         type="checkbox"
@@ -1040,9 +1040,9 @@
                                         wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                         class="fi-ta-page-checkbox fi-checkbox-input"
                                     />
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                <!--[if BLOCK]><![endif]--><?php if(count($sortableColumns)): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($sortableColumns)): ?>
                                     <div
                                         x-data="{
                                             sort: $wire.$entangle('tableSort', true),
@@ -1114,14 +1114,14 @@
 
                                                     </option>
 
-                                                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $sortableColumns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $sortableColumns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <option
                                                             value="<?php echo e($column->getName()); ?>"
                                                         >
                                                             <?php echo e($column->getLabel()); ?>
 
                                                         </option>
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal97dc683fe4ff7acce9e296503563dd85)): ?>
@@ -1201,12 +1201,12 @@
 <?php endif; ?>
                                         </label>
                                     </div>
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             </div>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                    <!--[if BLOCK]><![endif]--><?php if($content): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($content): ?>
                         <?php echo e($content->with(['records' => $records])); ?>
 
                     <?php else: ?>
@@ -1236,7 +1236,7 @@
                                 $previousRecordGroupTitle = null;
                             ?>
 
-                            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $records; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $record): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $records; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $record): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <?php
                                     $recordAction = $getRecordAction($record);
                                     $recordKey = $getRecordKey($record);
@@ -1270,8 +1270,8 @@
                                     );
                                 ?>
 
-                                <!--[if BLOCK]><![endif]--><?php if($recordGroupTitle !== $previousRecordGroupTitle): ?>
-                                    <!--[if BLOCK]><![endif]--><?php if($hasSummary && (! $isReordering) && filled($previousRecordGroupTitle)): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($recordGroupTitle !== $previousRecordGroupTitle): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasSummary && (! $isReordering) && filled($previousRecordGroupTitle)): ?>
                                         <table
                                             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                                                 'fi-ta-table',
@@ -1315,7 +1315,7 @@
 <?php endif; ?>
                                             </tbody>
                                         </table>
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                     <div
                                         <?php if($isRecordGroupCollapsible = $group->isCollapsible()): ?>
@@ -1329,7 +1329,7 @@
                                             'fi-collapsible' => $isRecordGroupCollapsible,
                                         ]); ?>"
                                     >
-                                        <?php if($isSelectionEnabled && ($maxSelectableRecords !== 1)): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && ($maxSelectableRecords !== 1)): ?>
                                             <input
                                                 aria-label="<?php echo e(__('filament-tables::table.fields.bulk_select_group.label', ['title' => $recordGroupTitle])); ?>"
                                                 type="checkbox"
@@ -1364,32 +1364,32 @@
                                                 wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                                 class="fi-ta-group-checkbox fi-checkbox-input"
                                             />
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                         <div>
                                             <<?php echo e($secondLevelHeadingTag); ?>
 
                                                 class="fi-ta-group-heading"
                                             >
-                                                <!--[if BLOCK]><![endif]--><?php if(filled($recordGroupLabel = ($group->isTitlePrefixedWithLabel() ? $group->getLabel() : null))): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($recordGroupLabel = ($group->isTitlePrefixedWithLabel() ? $group->getLabel() : null))): ?>
                                                         <?php echo e($recordGroupLabel); ?>:
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                                 <?php echo e($recordGroupTitle); ?>
 
                                             </<?php echo e($secondLevelHeadingTag); ?>>
 
-                                            <!--[if BLOCK]><![endif]--><?php if(filled($recordGroupDescription = $group->getDescription($record, $recordGroupTitle))): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($recordGroupDescription = $group->getDescription($record, $recordGroupTitle))): ?>
                                                 <p
                                                     class="fi-ta-group-description"
                                                 >
                                                     <?php echo e($recordGroupDescription); ?>
 
                                                 </p>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                         </div>
 
-                                        <!--[if BLOCK]><![endif]--><?php if($isRecordGroupCollapsible): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isRecordGroupCollapsible): ?>
                                             <button
                                                 aria-label="<?php echo e(filled($recordGroupLabel) ? ($recordGroupLabel . ': ' . $recordGroupTitle) : $recordGroupTitle); ?>"
                                                 x-bind:aria-expanded="! isGroupCollapsed(<?php echo \Illuminate\Support\Js::from($recordGroupTitle)->toHtml() ?>)"
@@ -1399,9 +1399,9 @@
                                                 <?php echo e(\Filament\Support\generate_icon_html(\Filament\Support\Icons\Heroicon::ChevronUp, alias: \Filament\Tables\View\TablesIconAlias::GROUPING_COLLAPSE_BUTTON, size: \Filament\Support\Enums\IconSize::Small)); ?>
 
                                             </button>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                     </div>
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                 <div
                                     <?php if($hasCollapsibleColumnsLayout): ?>
@@ -1434,7 +1434,7 @@
                                         $hasItemAfterRecordContent = $hasCollapsibleColumnsLayout && (! $isReordering);
                                     ?>
 
-                                    <!--[if BLOCK]><![endif]--><?php if($isReordering): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isReordering): ?>
                                         <button
                                             class="fi-ta-reorder-handle fi-icon-btn"
                                             type="button"
@@ -1459,24 +1459,24 @@
                                             wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                             class="fi-ta-record-checkbox fi-checkbox-input"
                                         />
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                     <div class="fi-ta-record-content-ctn">
                                         <div>
-                                            <!--[if BLOCK]><![endif]--><?php if($recordUrl): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($recordUrl): ?>
                                                 <a
                                                     <?php echo e(\Filament\Support\generate_href_html($recordUrl, $openRecordUrlInNewTab)); ?>
 
                                                     class="fi-ta-record-content"
                                                 >
-                                                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $columnsLayout; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $columnsLayoutComponent): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $columnsLayout; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $columnsLayoutComponent): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php echo e($columnsLayoutComponent
                                                                 ->record($record)
                                                                 ->recordKey($recordKey)
                                                                 ->rowLoop($loop)
                                                                 ->renderInLayout()); ?>
 
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                 </a>
                                             <?php elseif($recordAction): ?>
                                                 <?php
@@ -1492,31 +1492,31 @@
                                                     wire:target="<?php echo e($recordWireClickAction); ?>"
                                                     class="fi-ta-record-content"
                                                 >
-                                                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $columnsLayout; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $columnsLayoutComponent): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $columnsLayout; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $columnsLayoutComponent): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php echo e($columnsLayoutComponent
                                                                 ->record($record)
                                                                 ->recordKey($recordKey)
                                                                 ->rowLoop($loop)
                                                                 ->renderInLayout()); ?>
 
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                 </button>
                                             <?php else: ?>
                                                 <div
                                                     class="fi-ta-record-content"
                                                 >
-                                                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $columnsLayout; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $columnsLayoutComponent): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $columnsLayout; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $columnsLayoutComponent): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php echo e($columnsLayoutComponent
                                                                 ->record($record)
                                                                 ->recordKey($recordKey)
                                                                 ->rowLoop($loop)
                                                                 ->renderInLayout()); ?>
 
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                 </div>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                            <!--[if BLOCK]><![endif]--><?php if($hasCollapsibleColumnsLayout && (! $isReordering)): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasCollapsibleColumnsLayout && (! $isReordering)): ?>
                                                 <div
                                                     x-collapse
                                                     x-show="! isCollapsed"
@@ -1525,10 +1525,10 @@
                                                     <?php echo e($collapsibleColumnsLayout); ?>
 
                                                 </div>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                         </div>
 
-                                        <!--[if BLOCK]><![endif]--><?php if($recordActions && (! $isReordering)): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($recordActions && (! $isReordering)): ?>
                                             <div
                                                 class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                                                     'fi-ta-actions fi-wrapped sm:fi-not-wrapped',
@@ -1541,15 +1541,15 @@
                                                     'fi-ta-actions-before-columns-position' => $recordActionsPosition === RecordActionsPosition::BeforeColumns,
                                                 ]); ?>"
                                             >
-                                                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <?php echo e($action); ?>
 
-                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                             </div>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                     </div>
 
-                                    <!--[if BLOCK]><![endif]--><?php if($hasCollapsibleColumnsLayout && (! $isReordering)): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasCollapsibleColumnsLayout && (! $isReordering)): ?>
                                         <button
                                             type="button"
                                             x-on:click="isCollapsed = ! isCollapsed"
@@ -1558,7 +1558,7 @@
                                             <?php echo e(\Filament\Support\generate_icon_html(\Filament\Support\Icons\Heroicon::ChevronDown, alias: \Filament\Tables\View\TablesIconAlias::COLUMNS_COLLAPSE_BUTTON)); ?>
 
                                         </button>
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                 </div>
 
                                 <?php
@@ -1566,9 +1566,9 @@
                                     $previousRecordGroupTitle = $recordGroupTitle;
                                     $previousRecord = $record;
                                 ?>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                            <?php if($hasSummary && (! $isReordering) && filled($previousRecordGroupTitle) && ((! $records instanceof \Illuminate\Contracts\Pagination\Paginator) || (! $records->hasMorePages()))): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasSummary && (! $isReordering) && filled($previousRecordGroupTitle) && ((! $records instanceof \Illuminate\Contracts\Pagination\Paginator) || (! $records->hasMorePages()))): ?>
                                 <table class="fi-ta-table">
                                     <tbody>
                                         <?php
@@ -1597,19 +1597,19 @@
 <?php endif; ?>
                                     </tbody>
                                 </table>
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                         </div>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                    <?php if(($content || $hasColumnsLayout) && $contentFooter): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(($content || $hasColumnsLayout) && $contentFooter): ?>
                         <?php echo e($contentFooter->with([
                                 'columns' => $columns,
                                 'records' => $records,
                             ])); ?>
 
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                    <?php if($hasSummary && (! $isReordering)): ?>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasSummary && (! $isReordering)): ?>
                         <table class="fi-ta-table">
                             <tbody>
                                 <?php if (isset($component)) { $__componentOriginala8bb2de295dfa9cddf00151a9ea585e7 = $component; } ?>
@@ -1634,37 +1634,37 @@
 <?php endif; ?>
                             </tbody>
                         </table>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                 <?php elseif((! ($content || $hasColumnsLayout)) && ($records !== null)): ?>
                     <table class="fi-ta-table">
                         <thead>
-                            <!--[if BLOCK]><![endif]--><?php if($hasColumnGroups): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasColumnGroups): ?>
                                 <tr class="fi-ta-table-head-groups-row">
-                                    <!--[if BLOCK]><![endif]--><?php if(count($records)): ?>
-                                        <!--[if BLOCK]><![endif]--><?php if($isReordering): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($records)): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isReordering): ?>
                                             <th></th>
                                         <?php else: ?>
-                                            <!--[if BLOCK]><![endif]--><?php if(count($defaultRecordActions) && in_array($recordActionsPosition, [RecordActionsPosition::BeforeCells, RecordActionsPosition::BeforeColumns])): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && in_array($recordActionsPosition, [RecordActionsPosition::BeforeCells, RecordActionsPosition::BeforeColumns])): ?>
                                                 <th></th>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                            <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::BeforeCells): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::BeforeCells): ?>
                                                 <th></th>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $columnsLayout; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $columnGroup): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <!--[if BLOCK]><![endif]--><?php if($columnGroup instanceof Column): ?>
-                                            <!--[if BLOCK]><![endif]--><?php if($columnGroup->isVisible() && (! $columnGroup->isToggledHidden())): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $columnsLayout; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $columnGroup): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($columnGroup instanceof Column): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($columnGroup->isVisible() && (! $columnGroup->isToggledHidden())): ?>
                                                 <th></th>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                         <?php elseif($columnGroup instanceof ColumnGroup): ?>
                                             <?php
                                                 $columnGroupColumnsCount = count($columnGroup->getVisibleColumns());
                                             ?>
 
-                                            <!--[if BLOCK]><![endif]--><?php if($columnGroupColumnsCount): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($columnGroupColumnsCount): ?>
                                                 <th
                                                     colspan="<?php echo e($columnGroupColumnsCount); ?>"
                                                     <?php echo e($columnGroup->getExtraHeaderAttributeBag()->class([
@@ -1679,29 +1679,29 @@
                                                     <?php echo e($columnGroup->getLabel()); ?>
 
                                                 </th>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                    <?php if((! $isReordering) && count($records)): ?>
-                                        <?php if(count($defaultRecordActions) && in_array($recordActionsPosition, [RecordActionsPosition::AfterColumns, RecordActionsPosition::AfterCells])): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((! $isReordering) && count($records)): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && in_array($recordActionsPosition, [RecordActionsPosition::AfterColumns, RecordActionsPosition::AfterCells])): ?>
                                             <th></th>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                        <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells): ?>
                                             <th></th>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                 </tr>
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                             <tr>
-                                <!--[if BLOCK]><![endif]--><?php if(count($records)): ?>
-                                    <!--[if BLOCK]><![endif]--><?php if($isReordering): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($records)): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isReordering): ?>
                                         <th></th>
                                     <?php else: ?>
-                                        <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeCells): ?>
-                                            <!--[if BLOCK]><![endif]--><?php if($recordActionsColumnLabel): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeCells): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($recordActionsColumnLabel): ?>
                                                 <th class="fi-ta-header-cell">
                                                     <?php echo e($recordActionsColumnLabel); ?>
 
@@ -1711,14 +1711,14 @@
                                                     aria-label="<?php echo e(trans_choice('filament-tables::table.columns.actions.label', $flatRecordActionsCount)); ?>"
                                                     class="fi-ta-actions-header-cell fi-ta-empty-header-cell"
                                                 ></th>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                        <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::BeforeCells): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::BeforeCells): ?>
                                             <th
                                                 class="fi-ta-cell fi-ta-selection-cell"
                                             >
-                                                <!--[if BLOCK]><![endif]--><?php if($maxSelectableRecords !== 1): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($maxSelectableRecords !== 1): ?>
                                                     <input
                                                         aria-label="<?php echo e(__('filament-tables::table.fields.bulk_select_page.label')); ?>"
                                                         type="checkbox"
@@ -1751,12 +1751,12 @@
                                                         wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                                         class="fi-ta-page-checkbox fi-checkbox-input"
                                                     />
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                             </th>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                        <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeColumns): ?>
-                                            <!--[if BLOCK]><![endif]--><?php if($recordActionsColumnLabel): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeColumns): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($recordActionsColumnLabel): ?>
                                                 <th class="fi-ta-header-cell">
                                                     <?php echo e($recordActionsColumnLabel); ?>
 
@@ -1766,12 +1766,12 @@
                                                     aria-label="<?php echo e(trans_choice('filament-tables::table.columns.actions.label', $flatRecordActionsCount)); ?>"
                                                     class="fi-ta-actions-header-cell fi-ta-empty-header-cell"
                                                 ></th>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <?php
                                         $columnName = $column->getName();
                                         $columnLabel = $column->getLabel();
@@ -1802,7 +1802,7 @@
                                                 ])); ?>
 
                                     >
-                                        <!--[if BLOCK]><![endif]--><?php if($isColumnSortable): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isColumnSortable): ?>
                                             <span
                                                 aria-label="<?php echo e(trim(strip_tags($columnLabel))); ?>"
                                                 role="button"
@@ -1826,13 +1826,13 @@
                                         <?php else: ?>
                                             <?php echo e($columnLabel); ?>
 
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                     </th>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                <?php if((! $isReordering) && count($records)): ?>
-                                    <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::AfterColumns): ?>
-                                        <!--[if BLOCK]><![endif]--><?php if($recordActionsColumnLabel): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((! $isReordering) && count($records)): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::AfterColumns): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($recordActionsColumnLabel): ?>
                                             <th
                                                 class="fi-ta-header-cell fi-align-end"
                                             >
@@ -1844,14 +1844,14 @@
                                                 aria-label="<?php echo e(trans_choice('filament-tables::table.columns.actions.label', $flatRecordActionsCount)); ?>"
                                                 class="fi-ta-actions-header-cell fi-ta-empty-header-cell"
                                             ></th>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                    <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells): ?>
                                         <th
                                             class="fi-ta-cell fi-ta-selection-cell"
                                         >
-                                            <!--[if BLOCK]><![endif]--><?php if($maxSelectableRecords !== 1): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($maxSelectableRecords !== 1): ?>
                                                 <input
                                                     aria-label="<?php echo e(__('filament-tables::table.fields.bulk_select_page.label')); ?>"
                                                     type="checkbox"
@@ -1884,12 +1884,12 @@
                                                     wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                                     class="fi-ta-page-checkbox fi-checkbox-input"
                                                 />
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                         </th>
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                    <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::AfterCells): ?>
-                                        <!--[if BLOCK]><![endif]--><?php if($recordActionsColumnLabel): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::AfterCells): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($recordActionsColumnLabel): ?>
                                             <th
                                                 class="fi-ta-header-cell fi-align-end"
                                             >
@@ -1901,13 +1901,13 @@
                                                 aria-label="<?php echo e(trans_choice('filament-tables::table.columns.actions.label', $flatRecordActionsCount)); ?>"
                                                 class="fi-ta-actions-header-cell fi-ta-empty-header-cell"
                                             ></th>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             </tr>
                         </thead>
 
-                        <!--[if BLOCK]><![endif]--><?php if($isColumnSearchVisible || count($records)): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isColumnSearchVisible || count($records)): ?>
                             <tbody
                                 <?php if($isReorderable): ?>
                                     x-on:end.stop="
@@ -1920,25 +1920,25 @@
                                     data-sortable-animation-duration="<?php echo e($getReorderAnimationDuration()); ?>"
                                 <?php endif; ?>
                             >
-                                <!--[if BLOCK]><![endif]--><?php if($isColumnSearchVisible): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isColumnSearchVisible): ?>
                                     <tr
                                         class="fi-ta-row fi-ta-row-not-reorderable"
                                     >
-                                        <!--[if BLOCK]><![endif]--><?php if(count($records)): ?>
-                                            <!--[if BLOCK]><![endif]--><?php if($isReordering): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($records)): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isReordering): ?>
                                                 <td></td>
                                             <?php else: ?>
-                                                <!--[if BLOCK]><![endif]--><?php if(count($defaultRecordActions) && in_array($recordActionsPosition, [RecordActionsPosition::BeforeCells, RecordActionsPosition::BeforeColumns])): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && in_array($recordActionsPosition, [RecordActionsPosition::BeforeCells, RecordActionsPosition::BeforeColumns])): ?>
                                                     <td></td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                                <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::BeforeCells): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::BeforeCells): ?>
                                                     <td></td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                        <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <?php
                                                 $columnName = $column->getName();
                                             ?>
@@ -1950,7 +1950,7 @@
                                                     'fi-ta-individual-search-cell-' . str($columnName)->camel()->kebab() => $isIndividuallySearchable,
                                                 ]); ?>"
                                             >
-                                                <!--[if BLOCK]><![endif]--><?php if($isIndividuallySearchable): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isIndividuallySearchable): ?>
                                                     <?php if (isset($component)) { $__componentOriginal7ccc00a3eaa8946ec9c0ec17f5ab229b = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal7ccc00a3eaa8946ec9c0ec17f5ab229b = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament-tables::components.search-field','data' => ['debounce' => $searchDebounce,'onBlur' => $isSearchOnBlur,'wireModel' => 'tableColumnSearches.' . $columnName]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -1971,23 +1971,23 @@
 <?php $component = $__componentOriginal7ccc00a3eaa8946ec9c0ec17f5ab229b; ?>
 <?php unset($__componentOriginal7ccc00a3eaa8946ec9c0ec17f5ab229b); ?>
 <?php endif; ?>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                             </td>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                        <?php if((! $isReordering) && count($records)): ?>
-                                            <?php if(count($defaultRecordActions) && in_array($recordActionsPosition, [RecordActionsPosition::AfterColumns, RecordActionsPosition::AfterCells])): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((! $isReordering) && count($records)): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && in_array($recordActionsPosition, [RecordActionsPosition::AfterColumns, RecordActionsPosition::AfterCells])): ?>
                                                 <td></td>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                            <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells): ?>
                                                 <td></td>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                     </tr>
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                <!--[if BLOCK]><![endif]--><?php if(count($records)): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($records)): ?>
                                     <?php
                                         $isRecordRowStriped = false;
                                         $previousRecord = null;
@@ -1995,7 +1995,7 @@
                                         $previousRecordGroupTitle = null;
                                     ?>
 
-                                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $records; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $record): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $records; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $record): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <?php
                                             $recordAction = $getRecordAction($record);
                                             $recordKey = $getRecordKey($record);
@@ -2025,8 +2025,8 @@
                                             );
                                         ?>
 
-                                        <!--[if BLOCK]><![endif]--><?php if($recordGroupTitle !== $previousRecordGroupTitle): ?>
-                                            <!--[if BLOCK]><![endif]--><?php if($hasSummary && (! $isReordering) && filled($previousRecordGroupTitle)): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($recordGroupTitle !== $previousRecordGroupTitle): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasSummary && (! $isReordering) && filled($previousRecordGroupTitle)): ?>
                                                 <?php
                                                     $groupColumn = $group->getColumn();
                                                     $groupScopedAllTableSummaryQuery = $group->scopeQuery($this->getAllTableSummaryQuery(), $previousRecord);
@@ -2052,9 +2052,9 @@
 <?php $component = $__componentOriginala3ad14087ab6b316cf1e1d1a634acbeb; ?>
 <?php unset($__componentOriginala3ad14087ab6b316cf1e1d1a634acbeb); ?>
 <?php endif; ?>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                            <!--[if BLOCK]><![endif]--><?php if(! $isGroupsOnly): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $isGroupsOnly): ?>
                                                 <tr
                                                     class="fi-ta-row fi-ta-group-header-row"
                                                 >
@@ -2075,15 +2075,15 @@
                                                         }
                                                     ?>
 
-                                                    <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::BeforeCells): ?>
-                                                        <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeCells): ?>
+                                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::BeforeCells): ?>
+                                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeCells): ?>
                                                             <td></td>
-                                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                                         <td
                                                             class="fi-ta-cell fi-ta-group-selection-cell"
                                                         >
-                                                            <!--[if BLOCK]><![endif]--><?php if($maxSelectableRecords !== 1): ?>
+                                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($maxSelectableRecords !== 1): ?>
                                                                 <input
                                                                     aria-label="<?php echo e(__('filament-tables::table.fields.bulk_select_group.label', ['title' => $recordGroupTitle])); ?>"
                                                                     type="checkbox"
@@ -2118,9 +2118,9 @@
                                                                     wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                                                     class="fi-ta-group-checkbox fi-checkbox-input"
                                                                 />
-                                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                         </td>
-                                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                                     <td
                                                         colspan="<?php echo e($groupHeaderColspan); ?>"
@@ -2141,25 +2141,25 @@
 
                                                                     class="fi-ta-group-heading"
                                                                 >
-                                                                    <!--[if BLOCK]><![endif]--><?php if(filled($recordGroupLabel = ($group->isTitlePrefixedWithLabel() ? $group->getLabel() : null))): ?>
+                                                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($recordGroupLabel = ($group->isTitlePrefixedWithLabel() ? $group->getLabel() : null))): ?>
                                                                             <?php echo e($recordGroupLabel); ?>:
-                                                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                                                     <?php echo e($recordGroupTitle); ?>
 
                                                                 </<?php echo e($secondLevelHeadingTag); ?>>
 
-                                                                <!--[if BLOCK]><![endif]--><?php if(filled($recordGroupDescription = $group->getDescription($record, $recordGroupTitle))): ?>
+                                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($recordGroupDescription = $group->getDescription($record, $recordGroupTitle))): ?>
                                                                     <p
                                                                         class="fi-ta-group-description"
                                                                     >
                                                                         <?php echo e($recordGroupDescription); ?>
 
                                                                     </p>
-                                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                             </div>
 
-                                                            <!--[if BLOCK]><![endif]--><?php if($isRecordGroupCollapsible): ?>
+                                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isRecordGroupCollapsible): ?>
                                                                 <button
                                                                     aria-label="<?php echo e(filled($recordGroupLabel) ? ($recordGroupLabel . ': ' . $recordGroupTitle) : $recordGroupTitle); ?>"
                                                                     x-bind:aria-expanded="! isGroupCollapsed(<?php echo \Illuminate\Support\Js::from($recordGroupTitle)->toHtml() ?>)"
@@ -2169,15 +2169,15 @@
                                                                     <?php echo e(\Filament\Support\generate_icon_html(\Filament\Support\Icons\Heroicon::ChevronUp, alias: \Filament\Tables\View\TablesIconAlias::GROUPING_COLLAPSE_BUTTON, size: \Filament\Support\Enums\IconSize::Small)); ?>
 
                                                                 </button>
-                                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                         </div>
                                                     </td>
 
-                                                    <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells): ?>
+                                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells): ?>
                                                         <td
                                                             class="fi-ta-cell fi-ta-group-selection-cell"
                                                         >
-                                                            <!--[if BLOCK]><![endif]--><?php if($maxSelectableRecords !== 1): ?>
+                                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($maxSelectableRecords !== 1): ?>
                                                                 <input
                                                                     aria-label="<?php echo e(__('filament-tables::table.fields.bulk_select_group.label', ['title' => $recordGroupTitle])); ?>"
                                                                     type="checkbox"
@@ -2212,18 +2212,18 @@
                                                                     wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                                                     class="fi-ta-group-checkbox fi-checkbox-input"
                                                                 />
-                                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                         </td>
-                                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                 </tr>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                             <?php
                                                 $isRecordRowStriped = false;
                                             ?>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                        <!--[if BLOCK]><![endif]--><?php if(! $isGroupsOnly): ?>
+                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! $isGroupsOnly): ?>
                                             <tr
                                                 wire:key="<?php echo e($this->getId()); ?>.table.records.<?php echo e($recordKey); ?>"
                                                 <?php echo e($isReordering ? 'x-sortable-handle' : null); ?>
@@ -2242,7 +2242,7 @@
                                                     ...$getRecordClasses($record),
                                                 ]); ?>"
                                             >
-                                                <!--[if BLOCK]><![endif]--><?php if($isReordering): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isReordering): ?>
                                                     <td class="fi-ta-cell">
                                                         <button
                                                             class="fi-ta-reorder-handle fi-icon-btn"
@@ -2252,9 +2252,9 @@
 
                                                         </button>
                                                     </td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                                <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeCells && (! $isReordering)): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeCells && (! $isReordering)): ?>
                                                     <td class="fi-ta-cell">
                                                         <div
                                                             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
@@ -2268,19 +2268,19 @@
                                                                 },
                                                             ]); ?>"
                                                         >
-                                                            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                                 <?php echo e($action); ?>
 
-                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                         </div>
                                                     </td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                                <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && ($recordCheckboxPosition === RecordCheckboxPosition::BeforeCells) && (! $isReordering)): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && ($recordCheckboxPosition === RecordCheckboxPosition::BeforeCells) && (! $isReordering)): ?>
                                                     <td
                                                         class="fi-ta-cell fi-ta-selection-cell"
                                                     >
-                                                        <!--[if BLOCK]><![endif]--><?php if($isRecordSelectable($record)): ?>
+                                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isRecordSelectable($record)): ?>
                                                             <input
                                                                 aria-label="<?php echo e(__('filament-tables::table.fields.bulk_select_record.label', ['key' => $recordKey])); ?>"
                                                                 type="checkbox"
@@ -2297,11 +2297,11 @@
                                                                 wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                                                 class="fi-ta-record-checkbox fi-checkbox-input"
                                                             />
-                                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                     </td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                                <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeColumns && (! $isReordering)): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::BeforeColumns && (! $isReordering)): ?>
                                                     <td class="fi-ta-cell">
                                                         <div
                                                             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
@@ -2315,15 +2315,15 @@
                                                                 },
                                                             ]); ?>"
                                                         >
-                                                            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                                 <?php echo e($action); ?>
 
-                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                         </div>
                                                     </td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <?php
                                                         $column->record($record);
                                                         $column->rowLoop($loop->parent);
@@ -2388,9 +2388,9 @@
 
                                                         </<?php echo e($columnWrapperTag); ?>>
                                                     </td>
-                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                                <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::AfterColumns && (! $isReordering)): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::AfterColumns && (! $isReordering)): ?>
                                                     <td class="fi-ta-cell">
                                                         <div
                                                             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
@@ -2404,19 +2404,19 @@
                                                                 },
                                                             ]); ?>"
                                                         >
-                                                            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                                 <?php echo e($action); ?>
 
-                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                         </div>
                                                     </td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                                <!--[if BLOCK]><![endif]--><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells && (! $isReordering)): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isSelectionEnabled && $recordCheckboxPosition === RecordCheckboxPosition::AfterCells && (! $isReordering)): ?>
                                                     <td
                                                         class="fi-ta-cell fi-ta-selection-cell"
                                                     >
-                                                        <!--[if BLOCK]><![endif]--><?php if($isRecordSelectable($record)): ?>
+                                                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($isRecordSelectable($record)): ?>
                                                             <input
                                                                 aria-label="<?php echo e(__('filament-tables::table.fields.bulk_select_record.label', ['key' => $recordKey])); ?>"
                                                                 type="checkbox"
@@ -2433,11 +2433,11 @@
                                                                 wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
                                                                 class="fi-ta-record-checkbox fi-checkbox-input"
                                                             />
-                                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                     </td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                                <?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::AfterCells && (! $isReordering)): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(count($defaultRecordActions) && $recordActionsPosition === RecordActionsPosition::AfterCells && (! $isReordering)): ?>
                                                     <td class="fi-ta-cell">
                                                         <div
                                                             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
@@ -2451,15 +2451,15 @@
                                                                 },
                                                             ]); ?>"
                                                         >
-                                                            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $recordActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                                 <?php echo e($action); ?>
 
-                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                                         </div>
                                                     </td>
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                             </tr>
-                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                         <?php
                                             $isRecordRowStriped = ! $isRecordRowStriped;
@@ -2467,9 +2467,9 @@
                                             $previousRecordGroupKey = $recordGroupKey;
                                             $previousRecordGroupTitle = $recordGroupTitle;
                                         ?>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                    <?php if($hasSummary && (! $isReordering) && filled($previousRecordGroupTitle) && ((! $records instanceof \Illuminate\Contracts\Pagination\Paginator) || (! $records->hasMorePages()))): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasSummary && (! $isReordering) && filled($previousRecordGroupTitle) && ((! $records instanceof \Illuminate\Contracts\Pagination\Paginator) || (! $records->hasMorePages()))): ?>
                                         <?php
                                             $groupColumn = $group->getColumn();
                                             $groupScopedAllTableSummaryQuery = $group->scopeQuery($this->getAllTableSummaryQuery(), $previousRecord);
@@ -2495,9 +2495,9 @@
 <?php $component = $__componentOriginala3ad14087ab6b316cf1e1d1a634acbeb; ?>
 <?php unset($__componentOriginala3ad14087ab6b316cf1e1d1a634acbeb); ?>
 <?php endif; ?>
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                                    <?php if($hasSummary && (! $isReordering)): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasSummary && (! $isReordering)): ?>
                                         <?php
                                             $groupColumn = $group?->getColumn();
                                         ?>
@@ -2522,12 +2522,12 @@
 <?php $component = $__componentOriginala8bb2de295dfa9cddf00151a9ea585e7; ?>
 <?php unset($__componentOriginala8bb2de295dfa9cddf00151a9ea585e7); ?>
 <?php endif; ?>
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             </tbody>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                        <!--[if BLOCK]><![endif]--><?php if(($records !== null) && count($records) && $contentFooter): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(($records !== null) && count($records) && $contentFooter): ?>
                             <tfoot>
                                 <tr>
                                     <?php echo e($contentFooter->with([
@@ -2537,19 +2537,19 @@
 
                                 </tr>
                             </tfoot>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                     </table>
                 <?php elseif($records === null): ?>
                     <div class="fi-ta-table-loading-ctn">
                         <?php echo e(\Filament\Support\generate_loading_indicator_html(size: \Filament\Support\Enums\IconSize::TwoExtraLarge)); ?>
 
                     </div>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
             </div>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <?php if(($records !== null) && ! count($records)): ?>
-            <!--[if BLOCK]><![endif]--><?php if($emptyState = $getEmptyState()): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(($records !== null) && ! count($records)): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($emptyState = $getEmptyState()): ?>
                 <?php echo e($emptyState); ?>
 
             <?php else: ?>
@@ -2568,32 +2568,32 @@
 
                         </<?php echo e($secondLevelHeadingTag); ?>>
 
-                        <!--[if BLOCK]><![endif]--><?php if(filled($emptyStateDescription = $getEmptyStateDescription())): ?>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($emptyStateDescription = $getEmptyStateDescription())): ?>
                             <p class="fi-ta-empty-state-description">
                                 <?php echo e($emptyStateDescription); ?>
 
                             </p>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                        <!--[if BLOCK]><![endif]--><?php if($emptyStateActions = array_filter(
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($emptyStateActions = array_filter(
                                  $getEmptyStateActions(),
                                  fn (\Filament\Actions\Action | \Filament\Actions\ActionGroup $action): bool => $action->isVisible(),
                              )): ?>
                             <div
                                 class="fi-ta-actions fi-align-center fi-wrapped"
                             >
-                                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $emptyStateActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $emptyStateActions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <?php echo e($action); ?>
 
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             </div>
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                     </div>
                 </div>
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if((($records instanceof \Illuminate\Contracts\Pagination\Paginator) || ($records instanceof \Illuminate\Contracts\Pagination\CursorPaginator)) &&
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((($records instanceof \Illuminate\Contracts\Pagination\Paginator) || ($records instanceof \Illuminate\Contracts\Pagination\CursorPaginator)) &&
              ((! ($records instanceof \Illuminate\Contracts\Pagination\LengthAwarePaginator)) || $records->total())): ?>
             <?php
                 $hasExtremePaginationLinks = $hasExtremePaginationLinks();
@@ -2620,9 +2620,9 @@
 <?php $component = $__componentOriginal0c287a00f29f01c8f977078ff96faed4; ?>
 <?php unset($__componentOriginal0c287a00f29f01c8f977078ff96faed4); ?>
 <?php endif; ?>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if($hasFiltersBelowContent): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasFiltersBelowContent): ?>
             <?php if (isset($component)) { $__componentOriginal8fcc8bb3dcedd6e3c85ec7cd95e48b39 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal8fcc8bb3dcedd6e3c85ec7cd95e48b39 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament-tables::components.filters','data' => ['applyAction' => $filtersApplyAction,'form' => $filtersForm,'headingTag' => $secondLevelHeadingTag,'class' => 'fi-ta-filters-below-content']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -2643,7 +2643,7 @@
 <?php $component = $__componentOriginal8fcc8bb3dcedd6e3c85ec7cd95e48b39; ?>
 <?php unset($__componentOriginal8fcc8bb3dcedd6e3c85ec7cd95e48b39); ?>
 <?php endif; ?>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </div>
 
     <?php if (isset($component)) { $__componentOriginal028e05680f6c5b1e293abd7fbe5f9758 = $component; } ?>

@@ -1,4 +1,4 @@
-<!--[if BLOCK]><![endif]--><?php if($this instanceof \Filament\Actions\Contracts\HasActions && (! $this->hasActionsModalRendered)): ?>
+<?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($this instanceof \Filament\Actions\Contracts\HasActions && (! $this->hasActionsModalRendered)): ?>
     <div
         wire:partial="action-modals"
         x-data="filamentActionModals({
@@ -6,16 +6,16 @@
                 })"
         style="height: 0"
     >
-        <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $this->getMountedActions(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <!--[if BLOCK]><![endif]--><?php if((! $loop->last) || $this->mountedActionShouldOpenModal()): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php $__currentLoopData = $this->getMountedActions(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((! $loop->last) || $this->mountedActionShouldOpenModal()): ?>
                 <?php echo e($action->toModalHtmlable()); ?>
 
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </div>
 
     <?php
         $this->hasActionsModalRendered = true;
     ?>
-<?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\actions\resources\views/components/modals.blade.php ENDPATH**/ ?>

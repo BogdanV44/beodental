@@ -54,7 +54,7 @@ unset($__defined_vars, $__key, $__value); ?>
 
 
     <div class="fi-page-header-main-ctn">
-        <!--[if BLOCK]><![endif]--><?php if($subNavigation): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($subNavigation): ?>
             <div
                 class="fi-page-main-sub-navigation-mobile-menu-render-hook-ctn"
             >
@@ -89,9 +89,9 @@ unset($__defined_vars, $__key, $__value); ?>
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_SUB_NAVIGATION_MOBILE_MENU_AFTER, scopes: $this->getRenderHookScopes())); ?>
 
             </div>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-        <!--[if BLOCK]><![endif]--><?php if($header = $this->getHeader()): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($header = $this->getHeader()): ?>
             <?php echo e($header); ?>
 
         <?php elseif($heading = $this->getHeading()): ?>
@@ -111,19 +111,19 @@ unset($__defined_vars, $__key, $__value); ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['actions' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($headerActions),'breadcrumbs' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($breadcrumbs),'heading' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($heading),'subheading' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($subheading)]); ?>
-                <!--[if BLOCK]><![endif]--><?php if($heading instanceof \Illuminate\Contracts\Support\Htmlable): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($heading instanceof \Illuminate\Contracts\Support\Htmlable): ?>
                      <?php $__env->slot('heading', null, []); ?> 
                         <?php echo e($heading); ?>
 
                      <?php $__env->endSlot(); ?>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                <!--[if BLOCK]><![endif]--><?php if($subheading instanceof \Illuminate\Contracts\Support\Htmlable): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($subheading instanceof \Illuminate\Contracts\Support\Htmlable): ?>
                      <?php $__env->slot('subheading', null, []); ?> 
                         <?php echo e($subheading); ?>
 
                      <?php $__env->endSlot(); ?>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
              <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal4af1e0a8ab5c0dda93279f6800da3911)): ?>
@@ -134,11 +134,11 @@ unset($__defined_vars, $__key, $__value); ?>
 <?php $component = $__componentOriginal4af1e0a8ab5c0dda93279f6800da3911; ?>
 <?php unset($__componentOriginal4af1e0a8ab5c0dda93279f6800da3911); ?>
 <?php endif; ?>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
         <div class="fi-page-main">
-            <!--[if BLOCK]><![endif]--><?php if($subNavigation): ?>
-                <!--[if BLOCK]><![endif]--><?php if($subNavigationPosition === SubNavigationPosition::Start): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($subNavigation): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($subNavigationPosition === SubNavigationPosition::Start): ?>
                     <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_SUB_NAVIGATION_START_BEFORE, scopes: $this->getRenderHookScopes())); ?>
 
 
@@ -165,9 +165,9 @@ unset($__defined_vars, $__key, $__value); ?>
 
                     <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_SUB_NAVIGATION_START_AFTER, scopes: $this->getRenderHookScopes())); ?>
 
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                <!--[if BLOCK]><![endif]--><?php if($subNavigationPosition === SubNavigationPosition::Top): ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($subNavigationPosition === SubNavigationPosition::Top): ?>
                     <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_SUB_NAVIGATION_TOP_BEFORE, scopes: $this->getRenderHookScopes())); ?>
 
 
@@ -194,8 +194,8 @@ unset($__defined_vars, $__key, $__value); ?>
 
                     <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_SUB_NAVIGATION_TOP_AFTER, scopes: $this->getRenderHookScopes())); ?>
 
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <div class="fi-page-content">
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_HEADER_WIDGETS_BEFORE, scopes: $this->getRenderHookScopes())); ?>
@@ -220,7 +220,7 @@ unset($__defined_vars, $__key, $__value); ?>
 
             </div>
 
-            <!--[if BLOCK]><![endif]--><?php if($subNavigation && $subNavigationPosition === SubNavigationPosition::End): ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($subNavigation && $subNavigationPosition === SubNavigationPosition::End): ?>
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_SUB_NAVIGATION_END_BEFORE, scopes: $this->getRenderHookScopes())); ?>
 
 
@@ -247,16 +247,16 @@ unset($__defined_vars, $__key, $__value); ?>
 
                 <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_SUB_NAVIGATION_END_AFTER, scopes: $this->getRenderHookScopes())); ?>
 
-            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
         </div>
 
-        <!--[if BLOCK]><![endif]--><?php if($footer = $this->getFooter()): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($footer = $this->getFooter()): ?>
             <?php echo e($footer); ?>
 
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </div>
 
-    <!--[if BLOCK]><![endif]--><?php if(! ($this instanceof \Filament\Tables\Contracts\HasTable)): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(! ($this instanceof \Filament\Tables\Contracts\HasTable)): ?>
         <?php if (isset($component)) { $__componentOriginal028e05680f6c5b1e293abd7fbe5f9758 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal028e05680f6c5b1e293abd7fbe5f9758 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'filament-actions::components.modals','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -281,19 +281,19 @@ unset($__defined_vars, $__key, $__value); ?>
         <div
             wire:init="mountAction(<?php echo \Illuminate\Support\Js::from($this->defaultTableAction)->toHtml() ?> , <?php if(filled($this->defaultTableActionArguments)): ?> <?php echo \Illuminate\Support\Js::from($this->defaultTableActionArguments)->toHtml() ?> <?php else: ?> {} <?php endif; ?> , <?php echo \Illuminate\Support\Js::from(['table' => true, 'recordKey' => $this->defaultTableActionRecord])->toHtml() ?>)"
         ></div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if(filled($this->defaultAction)): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filled($this->defaultAction)): ?>
         <div
             wire:init="mountAction(<?php echo \Illuminate\Support\Js::from($this->defaultAction)->toHtml() ?> <?php if(filled($this->defaultActionArguments) || filled($this->defaultActionContext)): ?> , <?php if(filled($this->defaultActionArguments)): ?> <?php echo \Illuminate\Support\Js::from($this->defaultActionArguments)->toHtml() ?> <?php else: ?> {} <?php endif; ?> <?php endif; ?> <?php if(filled($this->defaultActionContext)): ?> , <?php echo \Illuminate\Support\Js::from($this->defaultActionContext)->toHtml() ?> <?php endif; ?>)"
         ></div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
     <?php echo e(\Filament\Support\Facades\FilamentView::renderHook(\Filament\View\PanelsRenderHook::PAGE_END, scopes: $this->getRenderHookScopes())); ?>
 
 
-    <!--[if BLOCK]><![endif]--><?php if(method_exists($this, 'hasUnsavedDataChangesAlert') && $this->hasUnsavedDataChangesAlert()): ?>
-        <!--[if BLOCK]><![endif]--><?php if(\Filament\Support\Facades\FilamentView::hasSpaMode()): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(method_exists($this, 'hasUnsavedDataChangesAlert') && $this->hasUnsavedDataChangesAlert()): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(\Filament\Support\Facades\FilamentView::hasSpaMode()): ?>
                 <?php
         $__scriptKey = '1272964336-0';
         ob_start();
@@ -323,10 +323,10 @@ unset($__defined_vars, $__key, $__value); ?>
 
         \Livewire\store($this)->push('scripts', $__output, $__scriptKey)
     ?>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if((! app()->hasDebugModeEnabled()) && $this->hasErrorNotifications()): ?>
+    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if((! app()->hasDebugModeEnabled()) && $this->hasErrorNotifications()): ?>
             <?php
         $__scriptKey = '1272964336-2';
         ob_start();
@@ -354,7 +354,7 @@ unset($__defined_vars, $__key, $__value); ?>
 
         \Livewire\store($this)->push('scripts', $__output, $__scriptKey)
     ?>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
     <?php if (isset($component)) { $__componentOriginal29f738301ffa464f2646caa32428c50f = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal29f738301ffa464f2646caa32428c50f = $attributes; } ?>

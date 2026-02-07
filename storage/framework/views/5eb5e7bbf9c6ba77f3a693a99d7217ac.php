@@ -1,4 +1,4 @@
-<!--[if BLOCK]><![endif]--><?php if(filament()->hasUnsavedChangesAlerts()): ?>
+<?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(filament()->hasUnsavedChangesAlerts()): ?>
         <?php
         $__scriptKey = '2784006485-0';
         ob_start();
@@ -14,5 +14,5 @@
 
         \Livewire\store($this)->push('scripts', $__output, $__scriptKey)
     ?>
-<?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\filament\resources\views/components/unsaved-action-changes-alert.blade.php ENDPATH**/ ?>

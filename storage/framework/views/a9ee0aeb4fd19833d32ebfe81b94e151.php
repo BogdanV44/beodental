@@ -131,7 +131,7 @@ unset($__defined_vars, $__key, $__value); ?>
                         <div class="fi-ta-col-manager-group">
                             <div class="fi-ta-col-manager-item">
                                 <label class="fi-ta-col-manager-label">
-                                    <!--[if BLOCK]><![endif]--><?php if($hasToggleableColumns): ?>
+                                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasToggleableColumns): ?>
                                         <input
                                             type="checkbox"
                                             class="fi-checkbox-input fi-valid"
@@ -141,12 +141,12 @@ unset($__defined_vars, $__key, $__value); ?>
                                             x-effect="$el.indeterminate = (groupedColumns[column.name] || {}).indeterminate || false"
                                             x-on:change="toggleGroup(column.name)"
                                         />
-                                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                     <span x-text="column.label"></span>
                                 </label>
 
-                                <!--[if BLOCK]><![endif]--><?php if($hasReorderableColumns): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasReorderableColumns): ?>
                                     <button
                                         x-sortable-handle
                                         x-on:click.stop
@@ -156,7 +156,7 @@ unset($__defined_vars, $__key, $__value); ?>
                                         <?php echo e(\Filament\Support\generate_icon_html(\Filament\Support\Icons\Heroicon::Bars2, alias: \Filament\Tables\View\TablesIconAlias::REORDER_HANDLE)); ?>
 
                                     </button>
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             </div>
                             <div
                                 <?php if($hasReorderableColumns): ?>
@@ -179,7 +179,7 @@ unset($__defined_vars, $__key, $__value); ?>
                                             <label
                                                 class="fi-ta-col-manager-label"
                                             >
-                                                <!--[if BLOCK]><![endif]--><?php if($hasToggleableColumns): ?>
+                                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasToggleableColumns): ?>
                                                     <input
                                                         type="checkbox"
                                                         class="fi-checkbox-input fi-valid"
@@ -188,14 +188,14 @@ unset($__defined_vars, $__key, $__value); ?>
                                                         x-bind:disabled="(getColumn(groupColumn.name, column.name) || {}).isToggleable === false"
                                                         x-on:change="toggleColumn(groupColumn.name, column.name)"
                                                     />
-                                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                                 <span
                                                     x-text="groupColumn.label"
                                                 ></span>
                                             </label>
 
-                                            <!--[if BLOCK]><![endif]--><?php if($hasReorderableColumns): ?>
+                                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasReorderableColumns): ?>
                                                 <button
                                                     x-sortable-handle
                                                     x-on:click.stop
@@ -205,7 +205,7 @@ unset($__defined_vars, $__key, $__value); ?>
                                                     <?php echo e(\Filament\Support\generate_icon_html(\Filament\Support\Icons\Heroicon::Bars2, alias: \Filament\Tables\View\TablesIconAlias::REORDER_HANDLE)); ?>
 
                                                 </button>
-                                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                         </div>
                                     </div>
                                 </template>
@@ -215,7 +215,7 @@ unset($__defined_vars, $__key, $__value); ?>
                     <template x-if="column.type !== 'group'">
                         <div class="fi-ta-col-manager-item">
                             <label class="fi-ta-col-manager-label">
-                                <!--[if BLOCK]><![endif]--><?php if($hasToggleableColumns): ?>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasToggleableColumns): ?>
                                     <input
                                         type="checkbox"
                                         class="fi-checkbox-input fi-valid"
@@ -224,12 +224,12 @@ unset($__defined_vars, $__key, $__value); ?>
                                         x-bind:disabled="(getColumn(column.name, null) || {}).isToggleable === false"
                                         x-on:change="toggleColumn(column.name)"
                                     />
-                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
                                 <span x-text="column.label"></span>
                             </label>
 
-                            <!--[if BLOCK]><![endif]--><?php if($hasReorderableColumns): ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($hasReorderableColumns): ?>
                                 <button
                                     x-sortable-handle
                                     x-on:click.stop
@@ -239,19 +239,19 @@ unset($__defined_vars, $__key, $__value); ?>
                                     <?php echo e(\Filament\Support\generate_icon_html(\Filament\Support\Icons\Heroicon::Bars2, alias: \Filament\Tables\View\TablesIconAlias::REORDER_HANDLE)); ?>
 
                                 </button>
-                            <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                         </div>
                     </template>
                 </div>
             </template>
         </div>
 
-        <!--[if BLOCK]><![endif]--><?php if($applyAction->isVisible()): ?>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($applyAction->isVisible()): ?>
             <div class="fi-ta-col-manager-apply-action-ctn">
                 <?php echo e($applyAction); ?>
 
             </div>
-        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
     </div>
 </div>
 <?php /**PATH C:\Users\bogda\Herd\beodental\vendor\filament\tables\resources\views/components/column-manager.blade.php ENDPATH**/ ?>
