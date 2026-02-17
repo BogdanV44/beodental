@@ -1,61 +1,28 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## About this project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Project topic: Dental practice web application with appointment booking.
 
-## About Laravel
+Technologies and libraries used in the project:
+ • Laravel (v.12)
+ • Filament
+ • LiveWire
+ • PHP
+ • HTML
+ • CSS
+ • JavaScript 
+ • Bootstrap
+ • MySQL
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project should provide a solution that allows a dental practice to transition to a modern electronic way of doing business. The software solution should provide benefits such as a centralized database of appointments and patients with easy search. You can clearly see the schedule of each dentist, all his appointments, the patient he will work with, when he is busy and when he is free. The practice will be given the opportunity to add new services and the dentist will improve his technological capabilities and professional team. The application will also allow the dentist to go on leave (such as vacation), with an interval from which to which date the patient, and the practice, is unable to book appointments with him.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+In addition to the convenience for the dental practice, the system will allow the patient to view all their past and upcoming appointments and cancel their appointment with a follow-up message for the dental practice. In order for a site visitor to schedule an appointment, they must first register. Upon successful registration, the user receives an account with which they can book appointments, and their data will be saved in the patient database.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The application and database are designed so that they can be easily upgraded in the new development phases. The first phase prepared this application for real-world implementation, and the second phase could enable it for additional functionalities such as creating offers, PDF service estimates, multilingual client part of the site, etc.
 
-## Learning Laravel
+More in the file PREGLED_RADA.pdf located in the root of the project.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Pages layout and segmentation
+<img width="886" height="1210" alt="image" src="https://github.com/user-attachments/assets/18bac833-c989-49aa-b78d-194b83616424" />
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Database design
+<img width="1010" height="973" alt="image" src="https://github.com/user-attachments/assets/46ace4c0-7326-4aa1-b999-1138ff0b5829" />
